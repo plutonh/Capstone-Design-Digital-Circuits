@@ -1,0 +1,264 @@
+module floating_MAC_16(CLK, RESETn, data_in_A, data_in_B, data_in_C, data_out, overflow, underflow);
+    input           CLK, RESETn;
+    input   [15:0]  data_in_A, data_in_B, data_in_C;
+    output  [15:0]  data_out;
+    output          overflow, underflow;
+
+    wire    [16:0]  data_out_mul;
+    wire    [15:0]  data_out_C;
+    wire            sign_out;
+
+    // Sign:        1 bit
+    // Exponent:    5 bits
+    // Fraction:    11 bits
+
+    // Exponent bias: 15 -> range: -15 ~ 16
+
+    // result = (-1)^Sign * (1 + Fraction) * 2^(Exponent  - Bias)
+
+    floating_mul_16 MUL(CLK, RESETn, data_in_A, data_in_B, data_in_C, data_out_mul, data_out_C, sign_out, underflow);
+    floating_add_16 ADD(CLK, RESETn, sign_out, data_out_mul, data_out_C, underflow, data_out, overflow);
+
+endmodule
+
+module floating_mul_16(CLK, RESETn, data_in_01, data_in_02, data_in_03, data_out, data_out_03, sign_out, underflow_out);
+
+// The results are sent out by increasing the exponent bit by one digit 
+// so that the final operation after the adder can determine whether overflow and underflow are possible.
+// Therefore data_out is 17-bits
+    parameter       num = 3;
+
+    input           CLK, RESETn;
+    input   [15:0]  data_in_01, data_in_02, data_in_03;
+    output  [16:0]  data_out;      // additional 2 bits for Exponent
+    output  [15:0]  data_out_03;
+    output          sign_out, underflow_out;
+
+    reg             sign_01;
+    reg             sign_02;
+    reg     [11:0]  sign_temp;
+    reg     [ 4:0]  expo_01;
+    reg     [ 4:0]  expo_02;
+    reg     [ 9:0]  frac_01;
+    reg     [ 9:0]  frac_02;
+    reg     [ 6:0]  expo_temp_in;  // additional 1 bit for checking overflow
+    reg     [ 6:0]  expo_temp_out;
+    reg     [19:0]  frac_temp_in;
+    reg     [ 9:0]  frac_temp_out;
+    reg             underflow;
+
+    reg     [10:0]  pipe_01      [ 9:0];
+	reg     [10:0]  pipe_02      [ 9:0];
+	reg     [20:0]  partials     [ 9:0];
+    reg     [ 6:0]  expo_delay   [ 9:0]; // delay for fraction multiplication
+    reg     [ 4:0]  buffer_01    [ 9:0]; // for expo_01
+    reg     [ 4:0]  buffer_02    [ 9:0]; // for expo_02
+    reg     [15:0]  buffer_03    [12:0]; // for data_in_03
+	
+	genvar i, j, k;
+
+    always @(posedge CLK or negedge RESETn) begin // bit pharsing
+        if(!RESETn) begin
+            sign_01   <= 1'd0;
+            sign_02   <= 1'd0;
+            expo_01   <= 7'd0;
+            expo_02   <= 7'd0;
+            frac_01   <= 10'd0;
+            frac_02   <= 10'd0;
+            underflow <= 1'd0;
+        end else begin
+            sign_01 <= data_in_01[15];
+            sign_02 <= data_in_02[15];
+            expo_01 <= data_in_01[14:10];
+            expo_02 <= data_in_02[14:10];
+            frac_01 <= data_in_01[9:0];
+            frac_02 <= data_in_02[9:0];
+        end
+    end
+    generate
+	    for(i=0; i<10+(2*num); i=i+1) begin : gen1
+		    always @(posedge CLK or negedge RESETn) begin
+			    if(!RESETn) begin
+				    pipe_01[0]      <= 0;
+				    pipe_02[0]      <= 0;
+				    partials[0]     <= 0;
+                    sign_temp[0]     <= 0;
+                    expo_temp_in    <= 6'd0;
+                    frac_temp_in    <= 20'd0;
+                    expo_delay[0]   <= 0;
+                    expo_temp_out   <= 7'd0;
+                    frac_temp_out   <= 10'd0;
+                    buffer_01[0]    <= 5'd0;
+                    buffer_02[0]    <= 5'd0;
+                    buffer_03[0]    <= 15'd0;
+                    underflow       <= 1'd0;
+                end else if(underflow == 1) begin
+                    sign_temp[0]  <= 0;
+                    expo_temp_in <= 7'd0;
+                    frac_temp_in <= 20'd0;                 
+                end else begin
+				    if(i==0) begin
+                        sign_temp[i]    <= (sign_01 != sign_02 ? 1'b1 : 1'b0);
+					    pipe_01[i]      <= {1'b1, data_in_01[9:0]};
+					    pipe_02[i]      <= {1'b1, data_in_02[9:0]};
+					    partials[i]     <= (pipe_01[i][i] ? pipe_02[i] << i : 0);
+                        if(expo_01 + expo_02 < 15) begin
+                            expo_delay[i]   <= 0;
+                            buffer_01[i]    <= expo_01;
+                            buffer_02[i]    <= expo_02;
+                        end else begin
+                            expo_delay[i]   <= expo_01 + expo_02 - 14;
+                        end
+                        buffer_03[i]    <= data_in_03;
+                    end else if(i > 0 && i < 10) begin
+                        sign_temp[i]    <= sign_temp[i-1];
+					    pipe_01[i]      <= pipe_01[i-1];
+					    pipe_02[i]      <= pipe_02[i-1];
+                        expo_delay[i]   <= expo_delay[i-1];
+                        buffer_01[i]    <= buffer_01[i-1];
+                        buffer_02[i]    <= buffer_02[i-1];
+                        buffer_03[i]    <= buffer_03[i-1];
+					    partials[i]     <= (pipe_01[i][i] ? pipe_02[i] << i : 0) + partials[i-1];
+                        expo_temp_in    <= expo_delay[9];
+                        if(partials[9][8] == 1) begin // rounding off
+                            frac_temp_in <= partials[9][18:9] + 1'b1;
+                        end else begin
+                            frac_temp_in <= partials[9][18:9];
+                        end
+                    end else if(i >= 10 && i < 10 + num) begin
+                        buffer_03[i] <= buffer_03[i-1];
+                        sign_temp[10] <= sign_temp[9];
+                        sign_temp[11] <= sign_temp[10];
+                    end else begin
+                        buffer_01[i] <= buffer_01[i-1];
+                        buffer_02[i] <= buffer_02[i-1];
+                        if((buffer_01[9+(2*num)] + buffer_02[9+(2*num)] < 15) && data_out != 0 && buffer_01[9+(2*num)] != 0 && buffer_02[9+(2*num)] != 0) begin
+                            underflow <= 1'd1;
+                        end
+                    end
+                 end
+		    end
+	    end
+    endgenerate
+
+    always @(posedge CLK or negedge RESETn) begin
+        if(partials[9][20] == 1) begin
+            expo_temp_out <= expo_temp_in + 1'b1;
+        end else begin
+            expo_temp_out <= expo_temp_in;
+        end
+        frac_temp_out <= frac_temp_in[9:0];
+    end
+
+    always @(*) begin
+        if(!CLK) begin
+            underflow <= 0;
+        end
+    end
+
+    assign sign_out         = sign_temp[11];
+    assign data_out         = {expo_temp_out, frac_temp_out};
+    assign data_out_03      = buffer_03[12];
+    assign underflow_out    = underflow;
+
+endmodule
+
+module floating_add_16(CLK, RESETn, sign_out, data_in_01, data_in_02, underflow_in, data_out, overflow_out);
+    input           CLK, RESETn, sign_out, underflow_in;
+    input   [16:0]  data_in_01;
+    input   [15:0]  data_in_02;
+    output  [15:0]  data_out;
+    output          overflow_out;
+
+    reg             sign_01;
+    reg             sign_02;
+    reg             sign;
+    reg     [ 6:0]  expo_01;
+    reg     [ 4:0]  expo_02;
+    reg     [ 9:0]  frac_01;
+    reg     [ 9:0]  frac_02;
+    reg             sign_temp;
+    reg     [ 6:0]  expo_temp_in;
+    reg     [ 6:0]  expo_temp_out; 
+    reg     [10:0]  frac_temp_in;
+    reg     [ 9:0]  frac_temp_out;
+    reg             overflow;
+
+    always @(posedge CLK or negedge RESETn) begin
+        if(!RESETn) begin
+            sign_01     <= 1'd0;
+            sign_02     <= 1'd0;
+            sign_temp   <= 1'd0;
+            sign        <= 1'd0;
+            expo_01     <= 7'd0;
+            expo_02     <= 5'd0;
+            frac_01     <= 11'd0;
+            frac_02     <= 10'd0;
+            overflow    <= 1'd0;
+        end else begin
+            sign_01     <= sign_out;
+            sign_02     <= data_in_02[15];
+            sign        <= sign_temp;
+            expo_01     <= {1'b0, data_in_01[15:10]};
+            expo_02     <= {2'b0, data_in_02[14:10]};
+            if(sign_out == 1) begin
+                frac_01 <= ~(data_in_01[9:0]) + 1'b1; // 2's complement
+            end else begin
+                frac_01     <= data_in_01[9:0];
+            end
+            if(data_in_02[15] == 1) begin
+                frac_02 <= ~(data_in_02[9:0]) + 1'b1; // 2's complement
+            end else begin
+                frac_02     <= data_in_02[9:0];
+            end
+        end
+    end
+    always @(posedge CLK or negedge RESETn) begin
+        if(!RESETn) begin
+            expo_temp_in <= 6'd0;
+            frac_temp_in <= 11'd0;
+        end else if(underflow_in == 1) begin // underflow
+            expo_temp_out <= 7'd0;
+            frac_temp_out <= 10'd0;
+        end else if(expo_01 > expo_02) begin
+            if(sign_01 == 1) begin
+                sign_temp <= 1'b1;
+            end else begin
+                sign_temp <= 1'b0;
+            end
+            expo_temp_in <= expo_01;
+            frac_temp_in <= frac_01 + (frac_02 >> (expo_01 - expo_02));
+        end else begin
+            if(sign_02 == 1) begin
+                sign_temp <= 1'b1;
+            end else begin
+                sign_temp <= 1'b0;
+            end
+            expo_temp_in <= expo_02;
+            frac_temp_in <= frac_02 + (frac_01 >> (expo_02 - expo_01));
+        end
+    end
+    always @(posedge CLK or negedge RESETn) begin
+        if(frac_temp_in[10] == 1) begin
+            expo_temp_out <= expo_temp_in << 1;
+            frac_temp_out <= frac_temp_in[9:0];
+        end else if ((expo_temp_out[5] == 1) || (expo_temp_out[6] == 1))begin
+            expo_temp_out <= expo_temp_in;
+            frac_temp_out <= frac_temp_in[9:0];
+        end else begin // overflow occurred
+            expo_temp_in <= 7'd0; // flush to zero
+            frac_temp_in <= 10'd0; // flush to zero
+            overflow <= 1'd1;
+        end
+    end
+
+    always @(*) begin
+        if(!CLK) begin
+            overflow <= 0;
+        end
+    end
+
+    assign data_out         = {sign, expo_temp_out[4:0], frac_temp_out};
+    assign overflow_out     = overflow;
+
+endmodule

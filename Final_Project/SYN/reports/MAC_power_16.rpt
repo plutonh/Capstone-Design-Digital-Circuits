@@ -1,0 +1,70 @@
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort medium
+Design : floating_MAC_16
+Version: O-2018.06-SP4
+Date   : Mon Dec 19 22:16:31 2022
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ff1p16vn40c (File: /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db)
+
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+floating_MAC_16        8000              saed32rvt_ff1p16vn40c
+floating_mul_16        8000              saed32rvt_ff1p16vn40c
+floating_add_16        8000              saed32rvt_ff1p16vn40c
+floating_add_16_DW01_add_0
+                       ForQA             saed32rvt_ff1p16vn40c
+floating_add_16_DW01_add_1
+                       ForQA             saed32rvt_ff1p16vn40c
+floating_mul_16_DW_mult_uns_0
+                       8000              saed32rvt_ff1p16vn40c
+floating_mul_16_DW01_add_0
+                       ForQA             saed32rvt_ff1p16vn40c
+floating_add_16_DW01_inc_0
+                       ForQA             saed32rvt_ff1p16vn40c
+floating_add_16_DW01_inc_1
+                       ForQA             saed32rvt_ff1p16vn40c
+
+
+Global Operating Voltage = 1.16 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  -1.0470 uW   (-9%)
+  Net Switching Power  =  11.0776 uW  (110%)
+                         ---------
+Total Dynamic Power    =  10.0306 uW  (100%)
+
+Cell Leakage Power     =  74.1394 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       -2.1378e+01            3.0026        2.9722e+07           11.3466 (  13.48%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     20.3307            8.0750        4.4418e+07           72.8234  (  86.52%)
+--------------------------------------------------------------------------------------------------
+Total          -1.0470e+00 uW        11.0776 uW     7.4139e+07 pW        84.1700 uW
+1

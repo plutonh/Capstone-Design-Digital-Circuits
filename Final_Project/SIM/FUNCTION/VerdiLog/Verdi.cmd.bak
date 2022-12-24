@@ -1,0 +1,107 @@
+debImport "-ssf" "floating_MAC_16.fsdb"
+debLoadSimResult \
+           /home/capstone6/capstone/Final_simulation/SIM/FUNCTION/floating_MAC_16.fsdb
+wvCreateWindow
+verdiDockWidgetDisplay -dock widgetDock_WelcomePage
+verdiDockWidgetHide -dock widgetDock_WelcomePage
+verdiWindowResize -win $_Verdi_1 "1920" "23" "1920" "1057"
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/tb_floating"
+wvGetSignalSetScope -win $_nWave2 "/tb_floating/MAC"
+wvGetSignalSetScope -win $_nWave2 "/tb_floating/MAC/MUL"
+wvSetPosition -win $_nWave2 {("G1" 8)}
+wvSetPosition -win $_nWave2 {("G1" 8)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_floating/MAC/MUL/data_out\[16:0\]} \
+{/tb_floating/MAC/MUL/data_out_03\[15:0\]} \
+{/tb_floating/MAC/MUL/expo_01\[6:0\]} \
+{/tb_floating/MAC/MUL/expo_02\[6:0\]} \
+{/tb_floating/MAC/MUL/expo_out\[6:0\]} \
+{/tb_floating/MAC/MUL/frac_01\[9:0\]} \
+{/tb_floating/MAC/MUL/frac_02\[9:0\]} \
+{/tb_floating/MAC/MUL/frac_temp\[9:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 )} 
+wvSetPosition -win $_nWave2 {("G1" 8)}
+wvSetPosition -win $_nWave2 {("G1" 8)}
+wvSetPosition -win $_nWave2 {("G1" 8)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_floating/MAC/MUL/data_out\[16:0\]} \
+{/tb_floating/MAC/MUL/data_out_03\[15:0\]} \
+{/tb_floating/MAC/MUL/expo_01\[6:0\]} \
+{/tb_floating/MAC/MUL/expo_02\[6:0\]} \
+{/tb_floating/MAC/MUL/expo_out\[6:0\]} \
+{/tb_floating/MAC/MUL/frac_01\[9:0\]} \
+{/tb_floating/MAC/MUL/frac_02\[9:0\]} \
+{/tb_floating/MAC/MUL/frac_temp\[9:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 )} 
+wvSetPosition -win $_nWave2 {("G1" 8)}
+wvGetSignalClose -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/tb_floating"
+wvGetSignalSetScope -win $_nWave2 "/tb_floating/MAC"
+wvGetSignalSetScope -win $_nWave2 "/tb_floating/MAC/MUL"
+wvGetSignalSetScope -win $_nWave2 "/tb_floating"
+wvSetPosition -win $_nWave2 {("G1" 14)}
+wvSetPosition -win $_nWave2 {("G1" 14)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_floating/MAC/MUL/data_out\[16:0\]} \
+{/tb_floating/MAC/MUL/data_out_03\[15:0\]} \
+{/tb_floating/MAC/MUL/expo_01\[6:0\]} \
+{/tb_floating/MAC/MUL/expo_02\[6:0\]} \
+{/tb_floating/MAC/MUL/expo_out\[6:0\]} \
+{/tb_floating/MAC/MUL/frac_01\[9:0\]} \
+{/tb_floating/MAC/MUL/frac_02\[9:0\]} \
+{/tb_floating/MAC/MUL/frac_temp\[9:0\]} \
+{/tb_floating/CLK} \
+{/tb_floating/RESETn} \
+{/tb_floating/data_in_A\[15:0\]} \
+{/tb_floating/data_in_B\[15:0\]} \
+{/tb_floating/data_in_C\[15:0\]} \
+{/tb_floating/data_out\[15:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 9 10 11 12 13 14 )} 
+wvSetPosition -win $_nWave2 {("G1" 14)}
+wvSetPosition -win $_nWave2 {("G1" 14)}
+wvSetPosition -win $_nWave2 {("G1" 14)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_floating/MAC/MUL/data_out\[16:0\]} \
+{/tb_floating/MAC/MUL/data_out_03\[15:0\]} \
+{/tb_floating/MAC/MUL/expo_01\[6:0\]} \
+{/tb_floating/MAC/MUL/expo_02\[6:0\]} \
+{/tb_floating/MAC/MUL/expo_out\[6:0\]} \
+{/tb_floating/MAC/MUL/frac_01\[9:0\]} \
+{/tb_floating/MAC/MUL/frac_02\[9:0\]} \
+{/tb_floating/MAC/MUL/frac_temp\[9:0\]} \
+{/tb_floating/CLK} \
+{/tb_floating/RESETn} \
+{/tb_floating/data_in_A\[15:0\]} \
+{/tb_floating/data_in_B\[15:0\]} \
+{/tb_floating/data_in_C\[15:0\]} \
+{/tb_floating/data_out\[15:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 9 10 11 12 13 14 )} 
+wvSetPosition -win $_nWave2 {("G1" 14)}
+wvGetSignalClose -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2

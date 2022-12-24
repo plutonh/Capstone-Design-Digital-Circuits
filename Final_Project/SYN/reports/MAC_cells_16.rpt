@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : cell
+Design : floating_MAC_16
+Version: O-2018.06-SP4
+Date   : Mon Dec 19 22:16:16 2022
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+ADD                       floating_add_16                 1179.990608
+                                                                    h, n
+MUL                       floating_mul_16                 1628.046482
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 2 cells                                             2808.037090
+1
