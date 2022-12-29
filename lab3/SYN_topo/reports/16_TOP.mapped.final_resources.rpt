@@ -1,0 +1,38 @@
+ 
+****************************************
+Report : resources
+Design : TOP
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:37:13 2022
+****************************************
+
+
+No resource sharing information to report.
+
+No implementations to report
+ 
+****************************************
+Design : pipe_array_mult
+****************************************
+
+Resource Report for this hierarchy in file ../RTL/pipe_array_mult.v
+=============================================================================
+| Cell           | Module         | Parameters | Contained Operations       |
+=============================================================================
+| add_x_1        | DW01_add       | width=8    | add_23 (pipe_array_mult.v:23) |
+| add_x_2        | DW01_add       | width=8    | add_23_I2 (pipe_array_mult.v:23) |
+| add_x_3        | DW01_add       | width=8    | add_23_I3 (pipe_array_mult.v:23) |
+=============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_x_1            | DW01_add         | apparch (area)     |                |
+| add_x_2            | DW01_add         | apparch (area)     |                |
+| add_x_3            | DW01_add         | apparch (area)     |                |
+===============================================================================
+
+1

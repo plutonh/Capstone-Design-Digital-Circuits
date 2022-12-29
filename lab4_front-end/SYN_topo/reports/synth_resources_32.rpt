@@ -1,0 +1,87 @@
+ 
+****************************************
+Report : resources
+Design : mul_A_bw32
+Version: O-2018.06-SP4
+Date   : Mon Oct 31 23:56:58 2022
+****************************************
+
+Resource Sharing Report for design mul_A_bw32 in file ../RTL/mul_A.v
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r510     | DW01_add     | width=64   |               | add_30_G2            |
+| r512     | DW01_add     | width=64   |               | add_30_G3            |
+| r514     | DW01_add     | width=64   |               | add_30_G4            |
+| r516     | DW01_add     | width=64   |               | add_30_G5            |
+| r518     | DW01_add     | width=64   |               | add_30_G6            |
+| r520     | DW01_add     | width=64   |               | add_30_G7            |
+| r522     | DW01_add     | width=64   |               | add_30_G8            |
+| r524     | DW01_add     | width=64   |               | add_30_G9            |
+| r526     | DW01_add     | width=64   |               | add_30_G10           |
+| r528     | DW01_add     | width=64   |               | add_30_G11           |
+| r530     | DW01_add     | width=64   |               | add_30_G12           |
+| r532     | DW01_add     | width=64   |               | add_30_G13           |
+| r534     | DW01_add     | width=64   |               | add_30_G14           |
+| r536     | DW01_add     | width=64   |               | add_30_G15           |
+| r538     | DW01_add     | width=64   |               | add_30_G16           |
+| r540     | DW01_add     | width=64   |               | add_30_G17           |
+| r542     | DW01_add     | width=64   |               | add_30_G18           |
+| r544     | DW01_add     | width=64   |               | add_30_G19           |
+| r546     | DW01_add     | width=64   |               | add_30_G20           |
+| r548     | DW01_add     | width=64   |               | add_30_G21           |
+| r550     | DW01_add     | width=64   |               | add_30_G22           |
+| r552     | DW01_add     | width=64   |               | add_30_G23           |
+| r554     | DW01_add     | width=64   |               | add_30_G24           |
+| r556     | DW01_add     | width=64   |               | add_30_G25           |
+| r558     | DW01_add     | width=64   |               | add_30_G26           |
+| r560     | DW01_add     | width=64   |               | add_30_G27           |
+| r562     | DW01_add     | width=64   |               | add_30_G28           |
+| r564     | DW01_add     | width=64   |               | add_30_G29           |
+| r566     | DW01_add     | width=64   |               | add_30_G30           |
+| r568     | DW01_add     | width=64   |               | add_30_G31           |
+| r570     | DW01_add     | width=64   |               | add_30_G32           |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_30_G2          | DW01_add         | rpl                |                |
+| add_30_G3          | DW01_add         | rpl                |                |
+| add_30_G4          | DW01_add         | rpl                |                |
+| add_30_G5          | DW01_add         | rpl                |                |
+| add_30_G6          | DW01_add         | rpl                |                |
+| add_30_G7          | DW01_add         | rpl                |                |
+| add_30_G8          | DW01_add         | rpl                |                |
+| add_30_G9          | DW01_add         | rpl                |                |
+| add_30_G10         | DW01_add         | rpl                |                |
+| add_30_G11         | DW01_add         | rpl                |                |
+| add_30_G12         | DW01_add         | rpl                |                |
+| add_30_G13         | DW01_add         | rpl                |                |
+| add_30_G14         | DW01_add         | rpl                |                |
+| add_30_G15         | DW01_add         | rpl                |                |
+| add_30_G16         | DW01_add         | rpl                |                |
+| add_30_G17         | DW01_add         | rpl                |                |
+| add_30_G18         | DW01_add         | rpl                |                |
+| add_30_G19         | DW01_add         | rpl                |                |
+| add_30_G20         | DW01_add         | rpl                |                |
+| add_30_G21         | DW01_add         | rpl                |                |
+| add_30_G22         | DW01_add         | rpl                |                |
+| add_30_G23         | DW01_add         | rpl                |                |
+| add_30_G24         | DW01_add         | rpl                |                |
+| add_30_G25         | DW01_add         | rpl                |                |
+| add_30_G26         | DW01_add         | rpl                |                |
+| add_30_G27         | DW01_add         | rpl                |                |
+| add_30_G28         | DW01_add         | rpl                |                |
+| add_30_G29         | DW01_add         | rpl                |                |
+| add_30_G30         | DW01_add         | rpl                |                |
+| add_30_G31         | DW01_add         | rpl                |                |
+| add_30_G32         | DW01_add         | rpl                |                |
+===============================================================================
+
+1

@@ -1,0 +1,62 @@
+ 
+****************************************
+Report : scenarios
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ss0p95v125c mode_norm.OC_rvt_ff1p16vn40c
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:36:49 2022
+****************************************
+
+All scenarios (Total=2): mode_norm.OC_rvt_ss0p95v125c mode_norm.OC_rvt_ff1p16vn40c
+All Active scenarios (Total=2): mode_norm.OC_rvt_ss0p95v125c mode_norm.OC_rvt_ff1p16vn40c
+Current scenario     : mode_norm.OC_rvt_ff1p16vn40c
+
+Scenario #0: mode_norm.OC_rvt_ss0p95v125c is active.
+Scenario options: Setup Leakage_power Dynamic_power
+Cts_corner: none
+Has timing derate: Yes
+
+Library(s) Used:
+ gtech (File: /data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/gtech.db)
+
+Operating condition(s) Used:
+  Analysis Type    : on_chip_variation
+  Max Operating Condition: saed32rvt_ss0p95v125c:ss0p95v125c
+  Max Process    : 0.99
+  Max Voltage    : 0.95
+  Max Temperature: 125.00
+  Min Operating Condition: saed32rvt_ss0p95v125c:ss0p95v125c
+  Min Process    : 0.99
+  Min Voltage    : 0.95
+  Min Temperature: 125.00
+
+TLU+ Files Used:
+  Max TLU+ file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus
+  Min TLU+ file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus
+  Tech2ITF mapping file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_tf_itf_tluplus.map
+
+Scenario #1: mode_norm.OC_rvt_ff1p16vn40c is active.
+Scenario options: Setup Leakage_power Dynamic_power
+Cts_corner: none
+Has timing derate: Yes
+
+Library(s) Used:
+ gtech (File: /data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/gtech.db)
+
+Operating condition(s) Used:
+  Analysis Type    : on_chip_variation
+  Max Operating Condition: saed32rvt_ff1p16vn40c:ff1p16vn40c
+  Max Process    : 1.01
+  Max Voltage    : 1.16
+  Max Temperature: -40.00
+  Min Operating Condition: saed32rvt_ff1p16vn40c:ff1p16vn40c
+  Min Process    : 1.01
+  Min Voltage    : 1.16
+  Min Temperature: -40.00
+
+TLU+ Files Used:
+  Max TLU+ file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus
+  Min TLU+ file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus
+  Tech2ITF mapping file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_tf_itf_tluplus.map
+
+1

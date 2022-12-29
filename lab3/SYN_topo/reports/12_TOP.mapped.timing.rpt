@@ -1,0 +1,290 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ss0p95v125c mode_norm.OC_rvt_ff1p16vn40c
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:37:13 2022
+****************************************
+
+ * Some/all delay information is back-annotated.
+Wire Load Model Mode: Inactive.
+
+  Startpoint: PAM/a_pipe_reg_2__3_
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: PAM/partials_reg_3__7_
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ss0p95v125c
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes     Voltage
+  -------------------------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                                      0.00       0.00                     
+  clock network delay (ideal)                                       0.10       0.10                     
+  PAM/a_pipe_reg_2__3_/CLK (DFFX1_RVT)                    0.10      0.00       0.10 r    i              0.95
+  PAM/a_pipe_reg_2__3_/Q (DFFX1_RVT)                      0.05      0.19       0.29 r                   0.95
+  PAM/a_pipe_2__3_ (net)                        5                   0.00       0.29 r                   
+  PAM/U13/Y (NAND3X0_RVT)                                 0.07      0.06 *     0.35 f                   0.95
+  PAM/n18 (net)                                 2                   0.00       0.35 f                   
+  PAM/U14/Y (INVX0_RVT)                                   0.05      0.06 *     0.40 r                   0.95
+  PAM/n10 (net)                                 1                   0.00       0.40 r                   
+  PAM/U19/CO (FADDX1_RVT)                                 0.05      0.11 *     0.51 r                   0.95
+  PAM/n7 (net)                                  1                   0.00       0.51 r                   
+  PAM/U18/CO (FADDX1_RVT)                                 0.05      0.10 *     0.61 r                   0.95
+  PAM/n5 (net)                                  1                   0.00       0.61 r                   
+  PAM/U17/CO (FADDX1_RVT)                                 0.04      0.09 *     0.70 r                   0.95
+  PAM/n4 (net)                                  1                   0.00       0.70 r                   
+  PAM/U16/Y (NBUFFX2_RVT)                                 0.02      0.05 *     0.75 r                   0.95
+  PAM/N43 (net)                                 1                   0.00       0.75 r                   
+  PAM/partials_reg_3__7_/D (DFFX1_RVT)                    0.02      0.00 *     0.75 r                   0.95
+  data arrival time                                                            0.75                     
+
+  clock MAIN_CLOCK (rise edge)                                      5.00       5.00                     
+  clock network delay (ideal)                                       0.10       5.10                     
+  clock uncertainty                                                -0.50       4.60                     
+  PAM/partials_reg_3__7_/CLK (DFFX1_RVT)                            0.00       4.60 r                   
+  library setup time                                               -0.04       4.56                     
+  data required time                                                           4.56                     
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                           4.56                     
+  data arrival time                                                           -0.75                     
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  3.81                     
+
+
+  Startpoint: a[0] (input port clocked by MAIN_CLOCK)
+  Endpoint: PAM/partials_reg_0__0_
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ss0p95v125c
+  Path Group: REGIN
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes     Voltage
+  -------------------------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                                      0.00       0.00                     
+  clock network delay (ideal)                                       0.10       0.10                     
+  input external delay                                              0.40       0.50 r                   
+  a[0] (in)                                               0.03      0.01       0.51 r                   
+  a[0] (net)                                    4                   0.00       0.51 r                   
+  PAM/a[0] (pipe_array_mult)                                        0.00       0.51 r                   
+  PAM/a[0] (net)                                                    0.00       0.51 r                   
+  PAM/U32/Y (AND2X1_RVT)                                  0.02      0.05 *     0.56 r                   0.95
+  PAM/N7 (net)                                  1                   0.00       0.56 r                   
+  PAM/partials_reg_0__0_/D (DFFX1_RVT)                    0.02      0.00 *     0.56 r                   0.95
+  data arrival time                                                            0.56                     
+
+  clock MAIN_CLOCK (rise edge)                                      5.00       5.00                     
+  clock network delay (ideal)                                       0.10       5.10                     
+  clock uncertainty                                                -0.50       4.60                     
+  PAM/partials_reg_0__0_/CLK (DFFX1_RVT)                            0.00       4.60 r                   
+  library setup time                                               -0.04       4.56                     
+  data required time                                                           4.56                     
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                           4.56                     
+  data arrival time                                                           -0.56                     
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  3.99                     
+
+
+  Startpoint: PAM/partials_reg_3__5_
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: y[5] (output port clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ss0p95v125c
+  Path Group: REGOUT
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes     Voltage
+  -------------------------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                                      0.00       0.00                     
+  clock network delay (ideal)                                       0.10       0.10                     
+  PAM/partials_reg_3__5_/CLK (DFFX1_RVT)                  0.10      0.00       0.10 r    i              0.95
+  PAM/partials_reg_3__5_/Q (DFFX1_RVT)                    0.04      0.18       0.28 f                   0.95
+  PAM/y[5] (net)                                1                   0.00       0.28 f                   
+  PAM/y[5] (pipe_array_mult)                                        0.00       0.28 f                   
+  y[5] (net)                                                        0.00       0.28 f                   
+  y[5] (out)                                              0.04      0.00 *     0.28 f                   
+  data arrival time                                                            0.28                     
+
+  clock MAIN_CLOCK (rise edge)                                      5.00       5.00                     
+  clock network delay (ideal)                                       0.10       5.10                     
+  clock uncertainty                                                -0.50       4.60                     
+  output external delay                                            -0.30       4.30                     
+  data required time                                                           4.30                     
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                           4.30                     
+  data arrival time                                                           -0.28                     
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  4.02                     
+
+
+  Startpoint: PAM/a_pipe_reg_0__1_
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: PAM/partials_reg_1__4_
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes     Voltage
+  -------------------------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                                      0.00       0.00                     
+  clock network delay (ideal)                                       0.10       0.10                     
+  PAM/a_pipe_reg_0__1_/CLK (DFFX1_RVT)                    0.10      0.00       0.10 r    i              1.16
+  PAM/a_pipe_reg_0__1_/Q (DFFX1_RVT)                      0.02      0.06       0.16 r                   1.16
+  PAM/a_pipe_0__1_ (net)                        5                   0.00       0.16 r                   
+  PAM/U3/Y (NAND3X0_RVT)                                  0.03      0.02 *     0.18 f                   1.16
+  PAM/n20 (net)                                 2                   0.00       0.18 f                   
+  PAM/U4/Y (INVX0_RVT)                                    0.02      0.02 *     0.20 r                   1.16
+  PAM/n22 (net)                                 1                   0.00       0.20 r                   
+  PAM/U36/CO (FADDX1_RVT)                                 0.02      0.03 *     0.24 r                   1.16
+  PAM/n24 (net)                                 1                   0.00       0.24 r                   
+  PAM/U37/CO (FADDX1_RVT)                                 0.02      0.03 *     0.27 r                   1.16
+  PAM/n1 (net)                                  2                   0.00       0.27 r                   
+  PAM/U7/Y (NAND2X0_RVT)                                  0.03      0.02 *     0.29 f                   1.16
+  PAM/n25 (net)                                 2                   0.00       0.29 f                   
+  PAM/U8/Y (AND2X1_RVT)                                   0.01      0.02 *     0.31 f                   1.16
+  PAM/n3 (net)                                  1                   0.00       0.31 f                   
+  PAM/U10/Y (AND2X1_RVT)                                  0.01      0.02 *     0.32 f                   1.16
+  PAM/N16 (net)                                 1                   0.00       0.32 f                   
+  PAM/partials_reg_1__4_/D (DFFX1_RVT)                    0.01      0.00 *     0.32 f                   1.16
+  data arrival time                                                            0.32                     
+
+  clock MAIN_CLOCK (rise edge)                                      5.00       5.00                     
+  clock network delay (ideal)                                       0.10       5.10                     
+  clock uncertainty                                                -0.50       4.60                     
+  PAM/partials_reg_1__4_/CLK (DFFX1_RVT)                            0.00       4.60 r                   
+  library setup time                                               -0.01       4.59                     
+  data required time                                                           4.59                     
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                           4.59                     
+  data arrival time                                                           -0.32                     
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  4.27                     
+
+
+  Startpoint: a[0] (input port clocked by MAIN_CLOCK)
+  Endpoint: PAM/partials_reg_0__0_
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c
+  Path Group: REGIN
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes     Voltage
+  -------------------------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                                      0.00       0.00                     
+  clock network delay (ideal)                                       0.10       0.10                     
+  input external delay                                              0.40       0.50 r                   
+  a[0] (in)                                               0.01      0.00       0.50 r                   
+  a[0] (net)                                    4                   0.00       0.50 r                   
+  PAM/a[0] (pipe_array_mult)                                        0.00       0.50 r                   
+  PAM/a[0] (net)                                                    0.00       0.50 r                   
+  PAM/U32/Y (AND2X1_RVT)                                  0.01      0.02 *     0.52 r                   1.16
+  PAM/N7 (net)                                  1                   0.00       0.52 r                   
+  PAM/partials_reg_0__0_/D (DFFX1_RVT)                    0.01      0.00 *     0.52 r                   1.16
+  data arrival time                                                            0.52                     
+
+  clock MAIN_CLOCK (rise edge)                                      5.00       5.00                     
+  clock network delay (ideal)                                       0.10       5.10                     
+  clock uncertainty                                                -0.50       4.60                     
+  PAM/partials_reg_0__0_/CLK (DFFX1_RVT)                            0.00       4.60 r                   
+  library setup time                                               -0.01       4.59                     
+  data required time                                                           4.59                     
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                           4.59                     
+  data arrival time                                                           -0.52                     
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  4.06                     
+
+
+  Startpoint: PAM/partials_reg_3__5_
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: y[5] (output port clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c
+  Path Group: REGOUT
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes     Voltage
+  -------------------------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                                      0.00       0.00                     
+  clock network delay (ideal)                                       0.10       0.10                     
+  PAM/partials_reg_3__5_/CLK (DFFX1_RVT)                  0.10      0.00       0.10 r    i              1.16
+  PAM/partials_reg_3__5_/Q (DFFX1_RVT)                    0.02      0.06       0.16 f                   1.16
+  PAM/y[5] (net)                                1                   0.00       0.16 f                   
+  PAM/y[5] (pipe_array_mult)                                        0.00       0.16 f                   
+  y[5] (net)                                                        0.00       0.16 f                   
+  y[5] (out)                                              0.02      0.00 *     0.16 f                   
+  data arrival time                                                            0.16                     
+
+  clock MAIN_CLOCK (rise edge)                                      5.00       5.00                     
+  clock network delay (ideal)                                       0.10       5.10                     
+  clock uncertainty                                                -0.50       4.60                     
+  output external delay                                            -0.30       4.30                     
+  data required time                                                           4.30                     
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                           4.30                     
+  data arrival time                                                           -0.16                     
+  -------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  4.14                     
+
+
+1

@@ -1,0 +1,135 @@
+ 
+****************************************
+Report : qor
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ss0p95v125c mode_norm.OC_rvt_ff1p16vn40c
+Version: O-2018.06-SP4
+Date   : Mon Oct  3 17:19:28 2022
+****************************************
+
+
+  Scenario 'mode_norm.OC_rvt_ss0p95v125c'
+  Timing Path Group 'REGIN'
+  -----------------------------------
+  Levels of Logic:              13.00
+  Critical Path Length:          1.07
+  Critical Path Slack:           2.98
+  Critical Path Clk Period:      5.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Scenario 'mode_norm.OC_rvt_ss0p95v125c'
+  Timing Path Group 'REGOUT'
+  -----------------------------------
+  Levels of Logic:               0.00
+  Critical Path Length:          0.20
+  Critical Path Slack:           4.00
+  Critical Path Clk Period:      5.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Scenario 'mode_norm.OC_rvt_ff1p16vn40c'
+  Timing Path Group 'REGIN'
+  -----------------------------------
+  Levels of Logic:              13.00
+  Critical Path Length:          0.36
+  Critical Path Slack:           3.73
+  Critical Path Clk Period:      5.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Scenario 'mode_norm.OC_rvt_ff1p16vn40c'
+  Timing Path Group 'REGOUT'
+  -----------------------------------
+  Levels of Logic:               0.00
+  Critical Path Length:          0.06
+  Critical Path Slack:           4.14
+  Critical Path Clk Period:      5.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          1
+  Hierarchical Port Count:         22
+  Leaf Cell Count:                 55
+  Buf/Inv Cell Count:               8
+  Buf Cell Count:                   1
+  Inv Cell Count:                   7
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:        47
+  Sequential Cell Count:            8
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:      124.784703
+  Noncombinational Area:    56.928257
+  Buf/Inv Area:             10.928192
+  Total Buffer Area:             2.03
+  Total Inverter Area:           8.90
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  Net XLength        :         130.70
+  Net YLength        :         234.38
+  -----------------------------------
+  Cell Area:               181.712960
+  Design Area:             181.712960
+  Net Length        :          365.08
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:            79
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: AIHA
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.03
+  Logic Optimization:                  0.87
+  Mapping Optimization:                3.39
+  -----------------------------------------
+  Overall Compile Time:               10.06
+  Overall Compile Wall Clock Time:     9.77
+
+  --------------------------------------------------------------------
+
+  Scenario: mode_norm.OC_rvt_ss0p95v125c   WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c   WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Scenario: mode_norm.OC_rvt_ss0p95v125c  (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c  (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

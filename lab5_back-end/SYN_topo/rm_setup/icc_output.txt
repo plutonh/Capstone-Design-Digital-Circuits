@@ -1,0 +1,11 @@
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+icc_shell> source rm_setup/lib_setup.tcl
+Error: could not open script file "rm_setup/lib_setup.tcl" (CMD-015)
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> 
+icc_shell> exit
+
+Thank you...
+

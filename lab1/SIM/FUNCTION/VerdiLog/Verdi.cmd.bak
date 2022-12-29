@@ -1,0 +1,3 @@
+wvCreateWindow
+wvOpenFile -win $_nWave2 \
+           {/home/capstone6/capstone/lab1/SIM/FUNCTION/full_adder.fsdb}

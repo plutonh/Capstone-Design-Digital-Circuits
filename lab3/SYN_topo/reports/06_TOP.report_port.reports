@@ -1,0 +1,166 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : port
+        -verbose
+Design : TOP
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:36:52 2022
+****************************************
+
+
+
+Attributes:
+    i - ideal_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+CLK            in      0.0000   0.0000   --      --      --         i
+RESETn         in      0.0000   0.0000   --      --      --         i
+a[0]           in      0.0000   0.0000   --      --      --         
+a[1]           in      0.0000   0.0000   --      --      --         
+a[2]           in      0.0000   0.0000   --      --      --         
+a[3]           in      0.0000   0.0000   --      --      --         
+b[0]           in      0.0000   0.0000   --      --      --         
+b[1]           in      0.0000   0.0000   --      --      --         
+b[2]           in      0.0000   0.0000   --      --      --         
+b[3]           in      0.0000   0.0000   --      --      --         
+y[0]           out     0.5696   0.0000   --      --      --         
+y[1]           out     0.5696   0.0000   --      --      --         
+y[2]           out     0.5696   0.0000   --      --      --         
+y[3]           out     0.5696   0.0000   --      --      --         
+y[4]           out     0.5696   0.0000   --      --      --         
+y[5]           out     0.5696   0.0000   --      --      --         
+y[6]           out     0.5696   0.0000   --      --      --         
+y[7]           out     0.5696   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+CLK                1      --              --              --        -- 
+RESETn             1      --              --              --        -- 
+a[0]               1      --              --              --        -- 
+a[1]               1      --              --              --        -- 
+a[2]               1      --              --              --        -- 
+a[3]               1      --              --              --        -- 
+b[0]               1      --              --              --        -- 
+b[1]               1      --              --              --        -- 
+b[2]               1      --              --              --        -- 
+b[3]               1      --              --              --        -- 
+y[0]               1      --              --              --        -- 
+y[1]               1      --              --              --        -- 
+y[2]               1      --              --              --        -- 
+y[3]               1      --              --              --        -- 
+y[4]               1      --              --              --        -- 
+y[5]               1      --              --              --        -- 
+y[6]               1      --              --              --        -- 
+y[7]               1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+CLK           --      --      --      --      --      -- 
+RESETn        --      --      --      --      --      -- 
+a[0]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+a[1]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+a[2]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+a[3]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+b[0]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+b[1]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+b[2]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+b[3]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+a[0]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+a[1]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+a[2]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+a[3]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+b[0]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+b[1]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+b[2]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+b[3]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+CLK           --      --     --      --     --      --     --     --        -- 
+RESETn        --      --     --      --     --      --     --     --        -- 
+a[0]          --      --     --      --     --      --     --     --        -- 
+a[1]          --      --     --      --     --      --     --     --        -- 
+a[2]          --      --     --      --     --      --     --     --        -- 
+a[3]          --      --     --      --     --      --     --     --        -- 
+b[0]          --      --     --      --     --      --     --     --        -- 
+b[1]          --      --     --      --     --      --     --     --        -- 
+b[2]          --      --     --      --     --      --     --     --        -- 
+b[3]          --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+CLK           --      --      --      -- 
+RESETn        --      --      --      -- 
+a[0]          --      --      --      -- 
+a[1]          --      --      --      -- 
+a[2]          --      --      --      -- 
+a[3]          --      --      --      -- 
+b[0]          --      --      --      -- 
+b[1]          --      --      --      -- 
+b[2]          --      --      --      -- 
+b[3]          --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+y[0]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[1]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[2]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[3]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[4]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[5]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[6]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[7]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+
+1

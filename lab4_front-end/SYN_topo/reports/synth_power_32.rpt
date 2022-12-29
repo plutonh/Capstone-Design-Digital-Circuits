@@ -1,0 +1,87 @@
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort medium
+Design : mul_A_bw32
+Version: O-2018.06-SP4
+Date   : Mon Oct 31 23:57:08 2022
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ff1p16vn40c (File: /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db)
+
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+mul_A_bw32             70000             saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_0  ForQA             saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_1  ForQA             saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_2  ForQA             saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_3  ForQA             saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_4  ForQA             saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_5  ForQA             saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_6  ForQA             saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_7  8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_8  8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_9  8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_10 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_11 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_12 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_13 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_14 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_15 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_16 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_17 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_18 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_19 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_20 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_21 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_22 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_23 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_24 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_25 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_26 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_27 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_28 8000              saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_29 ForQA             saed32rvt_ff1p16vn40c
+mul_A_bw32_DW01_add_30 ForQA             saed32rvt_ff1p16vn40c
+
+
+Global Operating Voltage = 1.16 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  10.5923 mW   (99%)
+  Net Switching Power  =  80.5792 uW    (1%)
+                         ---------
+Total Dynamic Power    =  10.6729 mW  (100%)
+
+Cell Leakage Power     = 942.0991 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       1.0567e+04           21.3402        6.2433e+08        1.1213e+04  (  96.54%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     25.0386           59.2391        3.1777e+08          402.0511  (   3.46%)
+--------------------------------------------------------------------------------------------------
+Total          1.0592e+04 uW        80.5793 uW     9.4210e+08 pW     1.1615e+04 uW
+1

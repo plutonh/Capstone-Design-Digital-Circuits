@@ -1,0 +1,14 @@
+ 
+****************************************
+Report : tlu_plus_files
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ff1p16vn40c
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:37:13 2022
+****************************************
+
+  Max TLU+ file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus
+  Min TLU+ file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus
+  Tech2ITF mapping file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_tf_itf_tluplus.map
+
+1

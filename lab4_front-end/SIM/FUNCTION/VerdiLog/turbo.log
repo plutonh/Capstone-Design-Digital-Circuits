@@ -1,0 +1,3 @@
+Command Line: /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/Novas -ssf TOP.fsdb
+uname(Linux AIHA 5.4.0-126-generic #142~18.04.1-Ubuntu SMP Thu Sep 1 16:25:16 UTC 2022 x86_64)
+au time 76.735537 7.197960 3.568702 delta 524308480 524308480 total 915025920 915025920

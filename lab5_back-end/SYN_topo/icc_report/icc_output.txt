@@ -1,0 +1,9 @@
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+icc_shell> gui_start
+Information: Visibility is turned ON for cells and cell contents because the task is set to Block Implementation (GUI-026)
+icc_shell> read_verilog dc_output/mul_HDL.v
+Error: Cannot read file 'dc_output/mul_HDL.v'. (UID-58)
+0
+icc_shell> source rm_setup/lib_define.tcl;set mw_logic0_net VSS;set mw_logic1_net VDD;set_tlu_plus_files -max_tluplus /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus  -min_tluplus /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus  -tech2itf_map /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_tf_itf_tluplus.map;create_mw_lib -technology /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/milkyway/saed32nm_1p9m_mw.tf  -mw_reference_library {/data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m} mul.mw;open_mw_lib mul.mw
+Error: could not open script file "rm_setup/lib_define.tcl" (CMD-015)
+icc_shell> 

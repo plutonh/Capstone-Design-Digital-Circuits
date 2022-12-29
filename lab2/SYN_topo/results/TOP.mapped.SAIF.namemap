@@ -1,0 +1,12 @@
+# PTPX name mapping file
+# created using Synopsys Power Compiler O-2018.06-SP4 */
+# design TOP
+# 
+set_rtl_to_gate_name -rtl {Np1/y[7]} -gate [get_cell {Np1/y_reg_7_}]
+set_rtl_to_gate_name -rtl {Np1/y[6]} -gate [get_cell {Np1/y_reg_6_}]
+set_rtl_to_gate_name -rtl {Np1/y[5]} -gate [get_cell {Np1/y_reg_5_}]
+set_rtl_to_gate_name -rtl {Np1/y[4]} -gate [get_cell {Np1/y_reg_4_}]
+set_rtl_to_gate_name -rtl {Np1/y[3]} -gate [get_cell {Np1/y_reg_3_}]
+set_rtl_to_gate_name -rtl {Np1/y[2]} -gate [get_cell {Np1/y_reg_2_}]
+set_rtl_to_gate_name -rtl {Np1/y[1]} -gate [get_cell {Np1/y_reg_1_}]
+set_rtl_to_gate_name -rtl {Np1/y[0]} -gate [get_cell {Np1/y_reg_0_}]

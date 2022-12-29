@@ -1,0 +1,3 @@
+Command Line: /data/SYNOPSYS/vcs-mx/M-2017.03-SP2/linux/bin/elabcom -logdir simv.daidir/elabcomLog -simvdaidir simv.daidir -lib simv.daidir/work -saveLevel -elab simv.daidir/kdb -simflow -simdir simv.daidir/kdb_libs -top tb_full_adder -Lf work
+uname(Linux AIHA 5.4.0-126-generic #142~18.04.1-Ubuntu SMP Thu Sep 1 16:25:16 UTC 2022 x86_64)
+au time 0.208075 0.025932 0.013471 delta 286019584 286019584 total 337403904 337403904

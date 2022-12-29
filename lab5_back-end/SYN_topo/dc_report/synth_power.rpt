@@ -1,0 +1,66 @@
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort medium
+Design : mul_bw16
+Version: O-2018.06-SP4
+Date   : Mon Nov 14 23:59:26 2022
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ff1p16vn40c (File: /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db)
+
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+mul_bw16               16000             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_4    ForQA             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_5    ForQA             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_6    ForQA             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_7    ForQA             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_8    ForQA             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_9    ForQA             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_10   ForQA             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_11   ForQA             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_12   ForQA             saed32rvt_ff1p16vn40c
+mul_bw16_DW01_add_13   ForQA             saed32rvt_ff1p16vn40c
+
+
+Global Operating Voltage = 1.16 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   2.5041 mW   (99%)
+  Net Switching Power  =  25.2881 uW    (1%)
+                         ---------
+Total Dynamic Power    =   2.5294 mW  (100%)
+
+Cell Leakage Power     = 226.4935 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       2.4941e+03            8.6950        1.5423e+08        2.6571e+03  (  96.42%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      9.9264           16.5931        7.2265e+07           98.7844  (   3.58%)
+--------------------------------------------------------------------------------------------------
+Total          2.5041e+03 uW        25.2881 uW     2.2649e+08 pW     2.7559e+03 uW
+1

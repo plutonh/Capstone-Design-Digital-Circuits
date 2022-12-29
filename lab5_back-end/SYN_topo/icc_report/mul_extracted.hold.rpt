@@ -1,0 +1,622 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 20
+Design : mul_bw16
+Version: O-2018.06-SP5
+Date   : Fri Nov 25 19:28:42 2022
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/-40/-40
+
+Information: Percent of Arnoldi-based delays = 26.11%
+
+Information: Percent of CCS-based delays =  1.60%
+
+  Startpoint: a_pipe_reg[2][13]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[3][13]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_pipe_reg[2][13]/CLK (DFFSSRX1_RVT)                    0.00       0.00 r
+  a_pipe_reg[2][13]/Q (DFFSSRX1_RVT)                      0.05       0.05 f
+  a_pipe_reg[3][13]/D (DFFSSRX1_RVT)                      0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  a_pipe_reg[3][13]/CLK (DFFSSRX1_RVT)                    0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: partials_reg[7][2]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[8][2]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  partials_reg[7][2]/CLK (DFFSSRX1_RVT)                   0.00       0.00 r
+  partials_reg[7][2]/Q (DFFSSRX1_RVT)                     0.05       0.05 f
+  add_30_G9/B[2] (mul_bw16_DW01_add_7)                    0.00       0.05 f
+  add_30_G9/SUM[2] (mul_bw16_DW01_add_7)                  0.00       0.05 f
+  partials_reg[8][2]/D (DFFSSRX1_RVT)                     0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  partials_reg[8][2]/CLK (DFFSSRX1_RVT)                   0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: partials_reg[4][3]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[5][3]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  partials_reg[4][3]/CLK (DFFSSRX1_RVT)                   0.00       0.00 r
+  partials_reg[4][3]/Q (DFFSSRX1_RVT)                     0.05       0.05 f
+  add_30_G6/B[3] (mul_bw16_DW01_add_10)                   0.00       0.05 f
+  add_30_G6/SUM[3] (mul_bw16_DW01_add_10)                 0.00       0.05 f
+  partials_reg[5][3]/D (DFFSSRX1_RVT)                     0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  partials_reg[5][3]/CLK (DFFSSRX1_RVT)                   0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: a_pipe_reg[5][8]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[6][8]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  a_pipe_reg[5][8]/CLK (DFFSSRX1_RVT)      0.00       0.00 r
+  a_pipe_reg[5][8]/Q (DFFSSRX1_RVT)        0.05       0.05 f
+  a_pipe_reg[6][8]/D (DFFSSRX1_RVT)        0.00 &     0.05 f
+  data arrival time                                   0.05
+
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.50       0.50
+  a_pipe_reg[6][8]/CLK (DFFSSRX1_RVT)      0.00       0.50 r
+  library hold time                       -0.01       0.49
+  data required time                                  0.49
+  -----------------------------------------------------------
+  data required time                                  0.49
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.44
+
+
+  Startpoint: partials_reg[6][4]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[7][4]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  partials_reg[6][4]/CLK (DFFSSRX1_RVT)                   0.00       0.00 r
+  partials_reg[6][4]/Q (DFFSSRX1_RVT)                     0.05       0.05 f
+  add_30_G8/B[4] (mul_bw16_DW01_add_8)                    0.00       0.05 f
+  add_30_G8/SUM[4] (mul_bw16_DW01_add_8)                  0.00       0.05 f
+  partials_reg[7][4]/D (DFFSSRX1_RVT)                     0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  partials_reg[7][4]/CLK (DFFSSRX1_RVT)                   0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: partials_reg[5][4]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[6][4]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  partials_reg[5][4]/CLK (DFFSSRX1_RVT)                   0.00       0.00 r
+  partials_reg[5][4]/Q (DFFSSRX1_RVT)                     0.05       0.05 f
+  add_30_G7/B[4] (mul_bw16_DW01_add_9)                    0.00       0.05 f
+  add_30_G7/SUM[4] (mul_bw16_DW01_add_9)                  0.00       0.05 f
+  partials_reg[6][4]/D (DFFSSRX1_RVT)                     0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  partials_reg[6][4]/CLK (DFFSSRX1_RVT)                   0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: a_pipe_reg[0][13]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[1][13]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_pipe_reg[0][13]/CLK (DFFSSRX1_RVT)                    0.00       0.00 r
+  a_pipe_reg[0][13]/Q (DFFSSRX1_RVT)                      0.05       0.05 f
+  a_pipe_reg[1][13]/D (DFFSSRX1_RVT)                      0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  a_pipe_reg[1][13]/CLK (DFFSSRX1_RVT)                    0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: partials_reg[4][1]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[5][1]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  partials_reg[4][1]/CLK (DFFSSRX1_RVT)                   0.00       0.00 r
+  partials_reg[4][1]/Q (DFFSSRX1_RVT)                     0.05       0.05 f
+  add_30_G6/B[1] (mul_bw16_DW01_add_10)                   0.00       0.05 f
+  add_30_G6/SUM[1] (mul_bw16_DW01_add_10)                 0.00       0.05 f
+  partials_reg[5][1]/D (DFFSSRX1_RVT)                     0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  partials_reg[5][1]/CLK (DFFSSRX1_RVT)                   0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: a_pipe_reg[4][9]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[5][9]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  a_pipe_reg[4][9]/CLK (DFFSSRX1_RVT)      0.00       0.00 r
+  a_pipe_reg[4][9]/Q (DFFSSRX1_RVT)        0.05       0.05 f
+  a_pipe_reg[5][9]/D (DFFSSRX1_RVT)        0.00 &     0.05 f
+  data arrival time                                   0.05
+
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.50       0.50
+  a_pipe_reg[5][9]/CLK (DFFSSRX1_RVT)      0.00       0.50 r
+  library hold time                       -0.01       0.49
+  data required time                                  0.49
+  -----------------------------------------------------------
+  data required time                                  0.49
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.44
+
+
+  Startpoint: a_pipe_reg[2][15]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[3][15]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_pipe_reg[2][15]/CLK (DFFSSRX1_RVT)                    0.00       0.00 r
+  a_pipe_reg[2][15]/Q (DFFSSRX1_RVT)                      0.05       0.05 f
+  a_pipe_reg[3][15]/D (DFFSSRX1_RVT)                      0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  a_pipe_reg[3][15]/CLK (DFFSSRX1_RVT)                    0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: partials_reg[8][1]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[9][1]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  partials_reg[8][1]/CLK (DFFSSRX1_RVT)                   0.00       0.00 r
+  partials_reg[8][1]/Q (DFFSSRX1_RVT)                     0.05       0.05 f
+  add_30_G10/B[1] (mul_bw16_DW01_add_6)                   0.00       0.05 f
+  add_30_G10/SUM[1] (mul_bw16_DW01_add_6)                 0.00       0.05 f
+  partials_reg[9][1]/D (DFFSSRX1_RVT)                     0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  partials_reg[9][1]/CLK (DFFSSRX1_RVT)                   0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: a_pipe_reg[6][7]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[7][7]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  a_pipe_reg[6][7]/CLK (DFFSSRX1_RVT)      0.00       0.00 r
+  a_pipe_reg[6][7]/Q (DFFSSRX1_RVT)        0.05       0.05 f
+  a_pipe_reg[7][7]/D (DFFSSRX1_RVT)        0.00 &     0.05 f
+  data arrival time                                   0.05
+
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.50       0.50
+  a_pipe_reg[7][7]/CLK (DFFSSRX1_RVT)      0.00       0.50 r
+  library hold time                       -0.01       0.49
+  data required time                                  0.49
+  -----------------------------------------------------------
+  data required time                                  0.49
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.44
+
+
+  Startpoint: a_pipe_reg[2][7]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[3][7]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  a_pipe_reg[2][7]/CLK (DFFSSRX1_RVT)      0.00       0.00 r
+  a_pipe_reg[2][7]/Q (DFFSSRX1_RVT)        0.05       0.05 f
+  a_pipe_reg[3][7]/D (DFFSSRX1_RVT)        0.00 &     0.05 f
+  data arrival time                                   0.05
+
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.50       0.50
+  a_pipe_reg[3][7]/CLK (DFFSSRX1_RVT)      0.00       0.50 r
+  library hold time                       -0.01       0.49
+  data required time                                  0.49
+  -----------------------------------------------------------
+  data required time                                  0.49
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.44
+
+
+  Startpoint: a_pipe_reg[2][14]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[3][14]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_pipe_reg[2][14]/CLK (DFFSSRX1_RVT)                    0.00       0.00 r
+  a_pipe_reg[2][14]/Q (DFFSSRX1_RVT)                      0.05       0.05 f
+  a_pipe_reg[3][14]/D (DFFSSRX1_RVT)                      0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  a_pipe_reg[3][14]/CLK (DFFSSRX1_RVT)                    0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: partials_reg[9][9]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[10][9]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  partials_reg[9][9]/CLK (DFFSSRX1_RVT)                   0.00       0.00 r
+  partials_reg[9][9]/Q (DFFSSRX1_RVT)                     0.05       0.05 f
+  add_30_G11/B[9] (mul_bw16_DW01_add_5)                   0.00       0.05 f
+  add_30_G11/SUM[9] (mul_bw16_DW01_add_5)                 0.00       0.05 f
+  partials_reg[10][9]/D (DFFSSRX1_RVT)                    0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  partials_reg[10][9]/CLK (DFFSSRX1_RVT)                  0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: a_pipe_reg[0][15]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[1][15]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_pipe_reg[0][15]/CLK (DFFSSRX1_RVT)                    0.00       0.00 r
+  a_pipe_reg[0][15]/Q (DFFSSRX1_RVT)                      0.05       0.05 f
+  a_pipe_reg[1][15]/D (DFFSSRX1_RVT)                      0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  a_pipe_reg[1][15]/CLK (DFFSSRX1_RVT)                    0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: partials_reg[2][1]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[3][1]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  partials_reg[2][1]/CLK (DFFSSRX1_RVT)                   0.00       0.00 r
+  partials_reg[2][1]/Q (DFFSSRX1_RVT)                     0.05       0.05 f
+  add_30_G4/B[1] (mul_bw16_DW01_add_12)                   0.00       0.05 f
+  add_30_G4/SUM[1] (mul_bw16_DW01_add_12)                 0.00       0.05 f
+  partials_reg[3][1]/D (DFFSSRX1_RVT)                     0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  partials_reg[3][1]/CLK (DFFSSRX1_RVT)                   0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: a_pipe_reg[5][6]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[6][6]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  a_pipe_reg[5][6]/CLK (DFFSSRX1_RVT)      0.00       0.00 r
+  a_pipe_reg[5][6]/Q (DFFSSRX1_RVT)        0.05       0.05 f
+  a_pipe_reg[6][6]/D (DFFSSRX1_RVT)        0.00 &     0.05 f
+  data arrival time                                   0.05
+
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.50       0.50
+  a_pipe_reg[6][6]/CLK (DFFSSRX1_RVT)      0.00       0.50 r
+  library hold time                       -0.01       0.49
+  data required time                                  0.49
+  -----------------------------------------------------------
+  data required time                                  0.49
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.44
+
+
+  Startpoint: partials_reg[3][2]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[4][2]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  partials_reg[3][2]/CLK (DFFSSRX1_RVT)                   0.00       0.00 r
+  partials_reg[3][2]/Q (DFFSSRX1_RVT)                     0.05       0.05 f
+  add_30_G5/B[2] (mul_bw16_DW01_add_11)                   0.00       0.05 f
+  add_30_G5/SUM[2] (mul_bw16_DW01_add_11)                 0.00       0.05 f
+  partials_reg[4][2]/D (DFFSSRX1_RVT)                     0.00 &     0.05 f
+  data arrival time                                                  0.05
+
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.50       0.50
+  partials_reg[4][2]/CLK (DFFSSRX1_RVT)                   0.00       0.50 r
+  library hold time                                      -0.01       0.49
+  data required time                                                 0.49
+  --------------------------------------------------------------------------
+  data required time                                                 0.49
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.44
+
+
+  Startpoint: a_pipe_reg[2][9]
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[3][9]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  a_pipe_reg[2][9]/CLK (DFFSSRX1_RVT)      0.00       0.00 r
+  a_pipe_reg[2][9]/Q (DFFSSRX1_RVT)        0.05       0.05 f
+  a_pipe_reg[3][9]/D (DFFSSRX1_RVT)        0.00 &     0.05 f
+  data arrival time                                   0.05
+
+  clock MAIN_CLOCK (rise edge)             0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.50       0.50
+  a_pipe_reg[3][9]/CLK (DFFSSRX1_RVT)      0.00       0.50 r
+  library hold time                       -0.01       0.49
+  data required time                                  0.49
+  -----------------------------------------------------------
+  data required time                                  0.49
+  data arrival time                                  -0.05
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.44
+
+
+1

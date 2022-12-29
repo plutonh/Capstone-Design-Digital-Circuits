@@ -1,0 +1,81 @@
+Warning: Congestion optimization is enabled as part of the physical guidance flow. (OPT-1445)
+Warning: The compile_timing_high_effort variable is a hidden variable. When setting this variable to true with the compile_ultra command, the tool performs higher effort optimizations, resulting in a longer runtime than running compile_ultra without the variable. Use compile_ultra without the variable as the default optimization strategy, and enable the variable only when your design requires further timing optimization. 
+Note: The -timing_high_effort_script option is not required to enable the compile_timing_high_effort variable. (OPT-1343)
+Information: Performing power optimization on scenarios: mode_norm.OC_rvt_ss0p95v125c mode_norm.OC_rvt_ff1p16vn40c and low power placement with switching activity from scenarios: mode_norm.OC_rvt_ss0p95v125c mode_norm.OC_rvt_ff1p16vn40c. (PWR-850)
+Alib files are up-to-date.
+
+TLU+ File = /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus
+TLU+ File = /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+Information: Layer M8 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer M9 is ignored for resistance and capacitance computation. (RCEX-019)
+Information: Layer MRDL is ignored for resistance and capacitance computation. (RCEX-019)
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer M1 : 0.16 0.14 (RCEX-011)
+Information: Library Derived Res for layer M1 : 2e-06 2e-06 (RCEX-011)
+Information: Library Derived Cap for layer M2 : 0.17 0.15 (RCEX-011)
+Information: Library Derived Res for layer M2 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M3 : 0.11 0.096 (RCEX-011)
+Information: Library Derived Res for layer M3 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M4 : 0.11 0.096 (RCEX-011)
+Information: Library Derived Res for layer M4 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M5 : 0.094 0.079 (RCEX-011)
+Information: Library Derived Res for layer M5 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M6 : 0.094 0.079 (RCEX-011)
+Information: Library Derived Res for layer M6 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M7 : 0.092 0.076 (RCEX-011)
+Information: Library Derived Res for layer M7 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M8 : 0.092 0.076 (RCEX-011)
+Information: Library Derived Res for layer M8 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer M9 : 0.11 0.088 (RCEX-011)
+Information: Library Derived Res for layer M9 : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Cap for layer MRDL : 0.11 0.11 (RCEX-011)
+Information: Library Derived Res for layer MRDL : 1.8e-07 1.8e-07 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.11 0.098 (RCEX-011)
+Information: Library Derived Horizontal Res : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.12 0.11 (RCEX-011)
+Information: Library Derived Vertical Res : 1.8e-06 1.8e-06 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 5.8e-07 5.8e-07 (RCEX-011)
+Information: Core area not specified, which can cause correlation issues with IC Compiler. (DCT-041)
+Warning: Port 'a[3]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'a[2]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'a[1]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'a[0]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'b[3]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'b[2]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'b[1]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'b[0]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'y[7]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'y[6]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'y[5]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'y[4]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'y[3]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'y[2]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'y[1]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'y[0]' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Warning: Port 'CLK' is missing location, compile_ultra will automatically assign a location for this port. (SPG-011)
+Information: Running optimization using a maximum of 2 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
+1

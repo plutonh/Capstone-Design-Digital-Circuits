@@ -1,0 +1,104 @@
+{
+    "MlibObjs": {},
+    "PrevCompiledModules": {},
+    "NameTable": {
+        "TB_TOP": [
+            "TB_TOP",
+            "pCHNx",
+            "module",
+            1
+        ],
+        "black": [
+            "black",
+            "YQinR",
+            "module",
+            2
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module",
+            3
+        ]
+    },
+    "CurCompileUdps": {},
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.107297,
+            "ru_stime_sec": 0.067557000000000006,
+            "ru_maxrss_kb": 91944,
+            "ru_nivcsw": 1,
+            "ru_minflt": 7651,
+            "ru_nvcsw": 43,
+            "ru_majflt": 0
+        },
+        "mopSpeed": 180929.35998268277,
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.050542999999999998,
+            "ru_stime_sec": 0.088317000000000007,
+            "ru_maxrss_kb": 37780,
+            "ru_nivcsw": 2,
+            "ru_minflt": 9657,
+            "ru_nvcsw": 27,
+            "ru_majflt": 0
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.050542999999999998,
+            "ru_stime_sec": 0.088317000000000007,
+            "ru_maxrss_kb": 37780,
+            "ru_nivcsw": 2,
+            "ru_minflt": 9657,
+            "ru_nvcsw": 27,
+            "ru_majflt": 0
+        },
+        "nMops": 5015,
+        "outputSizePerQuad": 83.023884349465746,
+        "quadSpeed": 57399.523775164169,
+        "nQuads": 1591,
+        "totalObjSize": 132091,
+        "ru_self_end": {
+            "ru_utime_sec": 0.135015,
+            "ru_stime_sec": 0.083391999999999994,
+            "ru_maxrss_kb": 99948,
+            "ru_nivcsw": 1,
+            "ru_minflt": 8839,
+            "ru_nvcsw": 45,
+            "ru_majflt": 0
+        },
+        "CodeGen(%)": 20.52957078843091,
+        "mop/quad": 3.1521055939660592,
+        "Frontend(%)": 79.470429211569083,
+        "peak_mem_kb": 212668
+    },
+    "CompileStatus": "Successful",
+    "SIMBData": {
+        "archive": "archive.0/_16620_archive_1.a",
+        "bytes": 69030,
+        "out": "amcQwB.o"
+    },
+    "PEModules": [],
+    "CurCompileModules": [
+        "...MASTER...",
+        "...MASTER...",
+        "TB_TOP",
+        "TB_TOP",
+        "black",
+        "black"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileProcesses": [
+        "cgproc.16620.json"
+    ],
+    "Misc": {
+        "cwd": "/home/capstone6/capstone/lab2/SIM/FUNCTION",
+        "csrc": "csrc",
+        "archive_dir": "archive.0",
+        "daidir_abs": "/home/capstone6/capstone/lab2/SIM/FUNCTION/simv.daidir",
+        "csrc_abs": "/home/capstone6/capstone/lab2/SIM/FUNCTION/csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc"
+    }
+}

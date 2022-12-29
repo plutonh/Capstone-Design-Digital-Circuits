@@ -1,0 +1,1277 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                Version O-2018.06-SP4 for linux64 - Nov 27, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Starting shell in Topographical mode...
+
+
+I am ready...
+
+RM-Info: Running script /home/capstone6/capstone/lab3/SYN_topo/rm_setup/common_setup.tcl
+
+RM-Info: Completed script /home/capstone6/capstone/lab3/SYN_topo/rm_setup/common_setup.tcl
+
+RM-Info: Running script /home/capstone6/capstone/lab3/SYN_topo/rm_setup/dc_setup_filenames.tcl
+
+RM-Info: Completed script /home/capstone6/capstone/lab3/SYN_topo/rm_setup/dc_setup_filenames.tcl
+
+puts "RM-Info: Running script [info script]\n"
+RM-Info: Running script /home/capstone6/capstone/lab3/SYN_topo/rm_setup/dc_setup.tcl
+
+#################################################################################
+# Design Compiler Reference Methodology Setup for Top-Down MCMM Flow
+# Script: dc_setup.tcl
+# Version: M-2016.12-SP4 (July 17, 2017)
+# Copyright (C) 2007-2017 Synopsys, Inc. All rights reserved.
+#################################################################################
+#################################################################################
+# Setup Variables
+#
+# Modify settings in this section to customize your Design Compiler Reference 
+# Methodology run.
+# Portions of dc_setup.tcl may be used by other tools so program name checks
+# are performed where necessary.
+#################################################################################
+# The following setting removes new variable info messages from the end of the log file
+set_app_var sh_new_variable_message false
+false
+if {$synopsys_program_name == "dc_shell"}  {
+
+  #################################################################################
+  # Design Compiler Setup Variables
+  #################################################################################
+
+  # Use the set_host_options command to enable multicore optimization to improve runtime.
+  # This feature has special usage and license requirements.  Refer to the 
+  # "Support for Multicore Technology" section in the Design Compiler User Guide
+  # for multicore usage guidelines.
+  # Note: This is a DC Ultra feature and is not supported in DC Expert.
+
+  # set_host_options -max_cores 4
+
+  # Change alib_library_analysis_path to point to a central cache of analyzed libraries
+  # to save runtime and disk space.  The following setting only reflects the
+  # default value and should be changed to a central location for best results.
+
+  set_app_var alib_library_analysis_path .
+
+  # Add any additional Design Compiler variables needed here
+
+}
+.
+set RTL_SOURCE_FILES   " $dc_source_path/TOP.v $dc_source_path/pipe_array_mult.v " ;
+ ../RTL/TOP.v ../RTL/pipe_array_mult.v 
+# Enter the list of source RTL files if reading from RTL
+# The following variables are used by scripts in the rm_dc_scripts folder to direct 
+# the location of the output files.
+set REPORTS_DIR "reports"
+reports
+set RESULTS_DIR "results"
+results
+file mkdir ${REPORTS_DIR}
+file mkdir ${RESULTS_DIR}
+#set variable OPTIMIZATION_FLOW from following RM+ flows
+#High Performance Low Power (hplp)
+#High Connectivity (hc)
+#Runtime Exploration (rtm_exp)
+set OPTIMIZATION_FLOW  "hplp" ;# Specify one flow out of hplp | hc | rtm_exp
+hplp
+#################################################################################
+# Search Path Setup
+#
+# Set up the search path to find the libraries and design files.
+#################################################################################
+set_app_var search_path ". ${ADDITIONAL_SEARCH_PATH} $search_path"
+. ../RTL /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_lvt/db_ccs /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_hvt/db_ccs /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/io_std/db_ccs /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/io_sp/db_ccs ./mcmm_cons ./script ./results  . /data/SYNOPSYS/syn/2018.06-SP4/libraries/syn /data/SYNOPSYS/syn/2018.06-SP4/minpower/syn /data/SYNOPSYS/syn/2018.06-SP4/dw/syn_ver /data/SYNOPSYS/syn/2018.06-SP4/dw/sim_ver
+#################################################################################
+# Library Setup
+#
+# This section is designed to work with the settings from common_setup.tcl
+# without any additional modification.
+#################################################################################
+# Milkyway variable settings
+# Make sure to define the Milkyway library variable
+# mw_design_library, it is needed by write_milkyway command
+set mw_reference_library ${MW_REFERENCE_LIB_DIRS}
+/data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+set mw_design_library ${DCRM_MW_LIBRARY_NAME}
+TOP_LIB
+set mw_site_name_mapping { {CORE unit} {Core unit} {core unit} }
+ {CORE unit} {Core unit} {core unit} 
+# The remainder of the setup below should only be performed in Design Compiler
+if {$synopsys_program_name == "dc_shell"}  {
+
+  set_app_var target_library ${TARGET_LIBRARY_FILES}
+  set_app_var synthetic_library dw_foundation.sldb
+
+   if { $OPTIMIZATION_FLOW == "hplp" } {
+  # Enabling the usage of DesignWare minPower Components requires additional DesignWare-LP license
+  # set_app_var synthetic_library "dw_minpower.sldb  dw_foundation.sldb"
+   }
+
+  set_app_var link_library "* $target_library $ADDITIONAL_LINK_LIB_FILES $synthetic_library"
+
+  # To apply the same min library to all scenarios for Multicorner-Multimode (MCMM), 
+  # uncomment the following to use set_min_library here.  Otherwise specify the min library
+  # with set_operating_conditions for each scenario in the ${DCRM_MCMM_SCENARIOS_SETUP_FILE}.
+
+  # foreach {max_library min_library} $MIN_LIBRARY_FILES {
+  #   set_min_library $max_library -min_version $min_library
+  # }
+
+  # Set the variable to use Verilog libraries for Test Design Rule Checking
+  # (See dc.tcl for details)
+
+  # set_app_var test_simulation_library <list of Verilog library files>
+
+  if {[shell_is_in_topographical_mode]} {
+
+    # To activate the extended layer mode to support 4095 layers uncomment the extend_mw_layers command 
+    # before creating the Milkyway library. The extended layer mode is permanent and cannot be reverted 
+    # back to the 255 layer mode once activated.
+
+    # extend_mw_layers
+
+    # Only create new Milkyway design library if it doesn't already exist
+    if {![file isdirectory $mw_design_library ]} {
+      create_mw_lib   -technology $TECH_FILE                       -mw_reference_library $mw_reference_library                       $mw_design_library
+    } else {
+      # If Milkyway design library already exists, ensure that it is consistent with specified Milkyway reference libraries
+      set_mw_lib_reference $mw_design_library -mw_reference_library $mw_reference_library
+    }
+
+    open_mw_lib     $mw_design_library
+
+    set_check_library_options -mcmm -logic_vs_physical
+    check_library > ${REPORTS_DIR}/${DCRM_CHECK_LIBRARY_REPORT}
+
+    # For MCMM flow, do not set_tlu_plus_files here.  TLUPlus files should be
+    # set up for each scenario in the ${DCRM_MCMM_SCENARIOS_SETUP_FILE}
+  }
+
+  #################################################################################
+  # Library Modifications
+  #
+  # Apply library modifications after the libraries are loaded.
+  #################################################################################
+
+  if {[file exists [which ${LIBRARY_DONT_USE_FILE}]]} {
+    puts "RM-Info: Sourcing script file [which ${LIBRARY_DONT_USE_FILE}]\n"
+    source -echo -verbose ${LIBRARY_DONT_USE_FILE}
+  }
+}
+
+------------------- Internal Reference Library Settings -----------------
+
+Library    /home/capstone6/capstone/lab3/SYN_topo/TOP_LIB
+  Reference    /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+
+
+------------------- Control File Reference Library Settings -----------
+
+Library    /home/capstone6/capstone/lab3/SYN_topo/TOP_LIB
+  Reference    /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+-------------------------------------------------------------------------
+
+puts "RM-Info: Completed script [info script]\n"
+RM-Info: Completed script /home/capstone6/capstone/lab3/SYN_topo/rm_setup/dc_setup.tcl
+
+
+==================================================================
+
+Library Settings:
+search_path:             . ../RTL /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_lvt/db_ccs /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_hvt/db_ccs /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/io_std/db_ccs /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/io_sp/db_ccs ./mcmm_cons ./script ./results  . /data/SYNOPSYS/syn/2018.06-SP4/libraries/syn /data/SYNOPSYS/syn/2018.06-SP4/minpower/syn /data/SYNOPSYS/syn/2018.06-SP4/dw/syn_ver /data/SYNOPSYS/syn/2018.06-SP4/dw/sim_ver
+link_library:            *  saed32rvt_ff1p16vn40c.db saed32rvt_ss0p95v125c.db   dw_foundation.sldb
+target_library:           saed32rvt_ff1p16vn40c.db saed32rvt_ss0p95v125c.db 
+symbol_library:          your_library.sdb
+mw_reference_library:    /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
+mw_design_library:       TOP_LIB
+
+==================================================================
+
+I am ready...
+
+Initializing gui preferences from file  /home/capstone6/.synopsys_dv_prefs.tcl
+#################################################################################
+# Design Compiler Reference Methodology Script for Top-Down MCMM Flow
+# Script: dc.tcl
+# Version: M-2016.12-SP4 (July 17, 2017)
+# Copyright (C) 2007-2016 Synopsys, Inc. All rights reserved.
+#################################################################################
+set_host_options -max_cores 8
+Warning: You requested 8 cores. However, load on host AIHA is 38.65. Tool will ignore the request and use 2 cores. (UIO-231)
+1
+#compile_seqmap_honor_sync_set_reset true
+if { $OPTIMIZATION_FLOW == "hplp"} {
+ #set_app_var hdlin_infer_multibit default_all
+ set_app_var hdlin_infer_multibit never
+}
+never
+set_app_var hdlin_infer_mux all
+all
+set_app_var spg_enable_via_resistance_support true
+true
+if {[file exists [which ${LIBRARY_DONT_USE_PRE_COMPILE_LIST}]]} {
+  puts "RM-Info: Sourcing script file [which ${LIBRARY_DONT_USE_PRE_COMPILE_LIST}]\n"
+  source -echo -verbose $LIBRARY_DONT_USE_PRE_COMPILE_LIST
+}
+set_check_library_options -mcmm -logic_vs_physical
+1
+check_library -logic_library_name { saed32rvt_ff1p16vn40c.db saed32rvt_ss0p95v125c.db } > ${REPORTS_DIR}/00_report_check_library.rpt
+check_tlu_plus_files > ${REPORTS_DIR}/01_report_check_tlu_plus.rpt
+set_svf ${RESULTS_DIR}/${DCRM_SVF_OUTPUT_FILE}
+1
+saif_map -start
+Information: The SAIF name mapping information database is now active. (PWR-602)
+1
+define_design_lib WORK -path ./WORK
+1
+analyze -format verilog ${RTL_SOURCE_FILES}
+Running PRESTO HDLC
+Compiling source file ../RTL/TOP.v
+Compiling source file ../RTL/pipe_array_mult.v
+Presto compilation completed successfully.
+Loading db file '/data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db'
+Loading db file '/data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/dw_foundation.sldb'
+1
+elaborate ${DESIGN_NAME}
+Loading db file '/data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/gtech.db'
+Loading db file '/data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/standard.sldb'
+  Loading link library 'saed32rvt_ff1p16vn40c'
+  Loading link library 'saed32rvt_ss0p95v125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'TOP'.
+Information: Building the design 'pipe_array_mult'. (HDL-193)
+
+Inferred memory devices in process
+	in routine pipe_array_mult line 15 in file
+		'../RTL/pipe_array_mult.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     a_pipe_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     b_pipe_reg      | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+|    partials_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+========================================================
+|  block name/line   | Inputs | Outputs | # sel inputs |
+========================================================
+| pipe_array_mult/18 |   2    |    4    |      1       |
+| pipe_array_mult/23 |   2    |    4    |      1       |
+| pipe_array_mult/23 |   2    |    4    |      1       |
+| pipe_array_mult/23 |   2    |    4    |      1       |
+========================================================
+Presto compilation completed successfully.
+1
+current_design ${DESIGN_NAME}
+Current design is 'TOP'.
+{TOP}
+redirect -tee -file ${REPORTS_DIR}/02_link.rpt {link}
+
+  Linking design 'TOP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /home/capstone6/capstone/lab3/SYN_topo/TOP.db, etc
+  saed32rvt_ff1p16vn40c (library) /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db
+  saed32rvt_ss0p95v125c (library) /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db
+  dw_foundation.sldb (library) /data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/dw_foundation.sldb
+
+1
+write -hierarchy -format ddc -output ${RESULTS_DIR}/${DCRM_ELABORATED_DESIGN_DDC_OUTPUT_FILE}
+Writing ddc file 'results/TOP.elab.ddc'.
+1
+#set_multibit_options -mode timing_driven
+remove_scenario -all
+1
+puts "RM-Info: Sourcing script file [which ${DCRM_MCMM_SCENARIOS_SETUP_FILE}]\n"
+RM-Info: Sourcing script file /home/capstone6/capstone/lab3/SYN_topo/mcmm_cons/TOP.mcmm.scenarios.tcl
+
+redirect -tee -file ${REPORTS_DIR}/03_source.rpt {source -echo -verbose ${DCRM_MCMM_SCENARIOS_SETUP_FILE}}
+#################################################################################
+# Design Compiler MCMM Scenarios Setup File Reference
+# Script: dc.mcmm.scenarios.tcl
+# Version: M-2016.12-SP4 (July 17, 2017)
+# Copyright (C) 2011-2017 Synopsys, Inc. All rights reserved.
+#################################################################################
+#################################################################################
+# This is an example of the MCMM scenarios setup file for Design Compiler.
+# Please note that this file will not work as given and must be edited for your
+# design.
+#
+# Create this file for each design in your MCMM flow and configure the filename
+# with the value of the ${DCRM_MCMM_SCENARIOS_SETUP_FILE} in
+# rm_setup/dc_setup_filenames.tcl
+#
+# It is recommended to use a minimum set of worst case setup scenarios
+# and a worst case leakage scenario in Design Compiler.
+# Further refinement to optimize across all possible scenarios is recommended
+# to be done in IC Compiler.
+#################################################################################
+#################################################################################
+# Additional Notes
+#################################################################################
+#
+# In MCMM, good leakage and dynamic power optimization results can be obtained by
+# using a worst case leakage scenario along with scenario-independent clock gating
+# (compile_ultra -gate_clock).
+#
+# A recommended scenario naming convention (used by Lynx) is the following:
+#
+# <MM_TYPE>.<OC_TYPE>.<RC_TYPE>
+#
+# MM_TYPE - Label that identifies the operating mode or set of timing constraints
+#           Example values: mode_norm, mode_slow, mode_test
+#
+# OC_TYPE - Label that identifies the library operating conditions or PVT corner
+#           Example values: OC_WC, OC_BC, OC_TYP, OC_LEAK, OC_TEMPINV
+#
+# RC_TYPE - Label that identifies an extraction corner (TLUPlus files)
+#           Example values: RC_MAX_1, RC_MIN_1, RC_TYP
+#################################################################################
+# Define additional setup scenarios here as needed, using the same format.
+#################################################################################
+# Worst Case Setup Scenario
+#################################################################################
+set scenario mode_norm.OC_rvt_ss0p95v125c
+mode_norm.OC_rvt_ss0p95v125c
+create_scenario ${scenario}
+Warning: Discarding all scenario specific information previously defined in this session. (UID-1008)
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+1
+# Read in scenario-specific constraints file
+puts "RM-Info: Sourcing script file [which [dcrm_mcmm_filename ${DCRM_CONSTRAINTS_INPUT_FILE} ${scenario}]]\n"
+RM-Info: Sourcing script file /home/capstone6/capstone/lab3/SYN_topo/mcmm_cons/TOP.constraints.mode_norm.OC_rvt_ss0p95v125c.tcl
+
+source -echo -verbose [dcrm_mcmm_filename ${DCRM_CONSTRAINTS_INPUT_FILE} ${scenario}]
+# The unit of time in this library is 1ns 
+# The unit of capacitance in this library is 1pF 
+# reset_design
+## Clock Basics
+create_clock -period 5 -name MAIN_CLOCK [get_ports CLK]
+1
+set_clock_latency 0.1 [get_clocks MAIN_CLOCK] 
+1
+set_clock_uncertainty 0.5  [get_clocks MAIN_CLOCK]
+1
+set_clock_transition 0.1 [get_clocks MAIN_CLOCK]
+1
+## In/Out
+set INPUTPORT [remove_from_collection [all_inputs] [get_ports "CLK RESETn"]]
+{a[3] a[2] a[1] a[0] b[3] b[2] b[1] b[0]}
+set OUTPUTPORT [all_outputs]
+{y[7] y[6] y[5] y[4] y[3] y[2] y[1] y[0]}
+set_input_delay -clock MAIN_CLOCK -max 0.4 $INPUTPORT
+1
+set_output_delay -clock MAIN_CLOCK -max 0.3 $OUTPUTPORT
+1
+## Area Constraint
+set_max_area 0
+1
+## ENVIRONMENTAL ATTRIBUTES 
+# set_driving_cell -lib_cell PBIDIR_18_18_NT_DR -library io_gppr_cmos28lpp_t18_ss_0p950v_1p650v_125c -no_design_rule [all_inputs]
+# set_load [load_of io_gppr_cmos28lpp_t18_ss_0p950v_1p650v_125c/PBIDIR_18_18_NT_DR/A] [all_outputs]
+set REFLIB saed32rvt_ss0p95v125c
+saed32rvt_ss0p95v125c
+set BUFFER "NBUFFX2_RVT"
+NBUFFX2_RVT
+set BUF_IN_PIN "A"
+A
+set BUF_OUT_PIN "Y"
+Y
+#set_load [expr 2 * [load_of $REFLIB/$BUFFER/$BUF_IN_PIN]] $OUTPUTPORT
+set_load [load_of $REFLIB/$BUFFER/$BUF_IN_PIN] $OUTPUTPORT
+1
+set_driving_cell -library $REFLIB -lib_cell $BUFFER -pin $BUF_OUT_PIN -no_design_rule $INPUTPORT
+1
+# set_driving_cell -lib_cell PBIDIR_18_18_NT_DR -library io_gppr_cmos28lpp_t18_ss_0p950v_1p650v_125c -no_design_rule [all_inputs]
+# set_load [load_of io_gppr_cmos28lpp_t18_ss_0p950v_1p650v_125c/PBIDIR_18_18_NT_DR/A] [all_outputs]
+#set_wire_load_mode "top"
+#set auto_wire_load_selection false
+#set_wire_load_model -name zero-wire-load-model
+##ETC ATTRIBUTES
+#set_max_fanout 200 [all_inputs]
+#set_max_transition 1.5 [current_design]
+#set_max_capacitance 150 [current_design]
+# pin name of sub module was changed so dont touch
+# set_dont_touch UTOP/Ufifo
+# set_dont_touch UTOP/Umemory_wrapper
+# We usually don't know the external capaciatnce 
+# so insert buffers to isolate and protect inner logics
+set_isolate_ports $OUTPUTPORT
+1
+set_ideal_network [get_ports "CLK RESETn"]
+1
+# no through pass assign syntax => insert buffers
+set_fix_multiple_port_nets -all -buffer_constants -feedthroughs -constants
+1
+1
+# puts "RM-Info: Reading SDC file [which [dcrm_mcmm_filename ${DCRM_SDC_INPUT_FILE} ${scenario}]]\n"
+# constraint syntax is not based on SDC style.... so at first, just source and do read_sdc after write_sdc
+# read_sdc [dcrm_mcmm_filename ${DCRM_SDC_INPUT_FILE} ${scenario}]
+# set_operating_conditions -max_library <OC_WC_LIB_NAME> -max <OC_WC>
+# set_operating_conditions ss_0p900v_125c -library sc9_cmos28lpp_base_rvt_ss_nominal_max_0p900v_125c_sadhm -analysis_type on_chip_variation
+set_operating_conditions ss0p95v125c -library saed32rvt_ss0p95v125c -analysis_type on_chip_variation
+Using operating conditions 'ss0p95v125c' found in library 'saed32rvt_ss0p95v125c'.
+1
+# OCV variation from voltage IR-drop 3.6%
+set_timing_derate -early 0.964
+1
+# set_tlu_plus_files -max_tluplus <OC_WC_TLUPLUS_MAX_FILE> -tech2itf_map ${MAP_FILE}
+set_tlu_plus_files -max_tluplus $TLUPLUS_MAX_FILE -min_tluplus $TLUPLUS_MIN_FILE -tech2itf_map ${MAP_FILE}
+1
+check_tlu_plus_files
+
+Sanity check for TLU+ vs MW-Tech files:
+ mapping_file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_tf_itf_tluplus.map
+ number of unique tlu+ files in mcmm mode: 2
+  /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus
+  /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+1
+# Include scenario specific SAIF file, if possible, for power analysis.
+# Otherwise, the default toggle rate of 0.1 will be used for propagating
+# switching activity.
+read_saif -auto_map_names -input ../SIM/FUNCTION/${DESIGN_NAME}.saif -instance TB_${DESIGN_NAME}/U${DESIGN_NAME} -verbose
+Error: Cannot find the SAIF file (../SIM/FUNCTION/TOP.saif). (PWR-201)
+0
+# Set options for worst case setup scenario
+set_scenario_options -setup true -hold false -leakage_power true  -dynamic_power true
+1
+report_scenario_options
+ 
+****************************************
+Report : scenario_options
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ss0p95v125c
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:36:48 2022
+****************************************
+
+Scenario: mode_norm.OC_rvt_ss0p95v125c is active.
+ setup         : true 
+ hold          : false 
+ leakage_power : true 
+ dynamic_power : true 
+
+ cts_mode      : false 
+ cts_corner    : none 
+
+1
+write_sdc -nosplit ${RESULTS_DIR}/[dcrm_mcmm_filename ${DCRM_FINAL_SDC_OUTPUT_FILE} ${scenario}]
+1
+### Define additional setup scenarios here as needed, using the same format.
+###################################################################################
+### Worst Case Setup Scenario
+###################################################################################
+set scenario mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+create_scenario ${scenario}
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+1
+# Read in scenario-specific constraints file
+puts "RM-Info: Sourcing script file [which [dcrm_mcmm_filename ${DCRM_CONSTRAINTS_INPUT_FILE} ${scenario}]]\n"
+RM-Info: Sourcing script file /home/capstone6/capstone/lab3/SYN_topo/mcmm_cons/TOP.constraints.mode_norm.OC_rvt_ff1p16vn40c.tcl
+
+source -echo -verbose [dcrm_mcmm_filename ${DCRM_CONSTRAINTS_INPUT_FILE} ${scenario}]
+# The unit of time in this library is 1ns 
+# The unit of capacitance in this library is 1pF 
+# reset_design
+## Clock Basics
+create_clock -period 5 -name MAIN_CLOCK [get_ports CLK]
+1
+set_clock_latency 0.1 [get_clocks MAIN_CLOCK] 
+1
+set_clock_uncertainty 0.5  [get_clocks MAIN_CLOCK]
+1
+set_clock_transition 0.1 [get_clocks MAIN_CLOCK]
+1
+## In/Out
+set INPUTPORT [remove_from_collection [all_inputs] [get_ports "CLK RESETn"]]
+{a[3] a[2] a[1] a[0] b[3] b[2] b[1] b[0]}
+set OUTPUTPORT [all_outputs]
+{y[7] y[6] y[5] y[4] y[3] y[2] y[1] y[0]}
+set_input_delay -clock MAIN_CLOCK -max 0.4 $INPUTPORT
+1
+set_output_delay -clock MAIN_CLOCK -max 0.3 $OUTPUTPORT
+1
+## Area Constraint
+set_max_area 0
+1
+## ENVIRONMENTAL ATTRIBUTES 
+# set_driving_cell -lib_cell PBIDIR_18_18_NT_DR -library io_gppr_cmos28lpp_t18_ss_0p950v_1p650v_125c -no_design_rule [all_inputs]
+# set_load [load_of io_gppr_cmos28lpp_t18_ss_0p950v_1p650v_125c/PBIDIR_18_18_NT_DR/A] [all_outputs]
+set REFLIB saed32rvt_ff1p16vn40c
+saed32rvt_ff1p16vn40c
+set BUFFER "NBUFFX2_RVT"
+NBUFFX2_RVT
+set BUF_IN_PIN "A"
+A
+set BUF_OUT_PIN "Y"
+Y
+#set_load [expr 2 * [load_of $REFLIB/$BUFFER/$BUF_IN_PIN]] $OUTPUTPORT
+set_load [load_of $REFLIB/$BUFFER/$BUF_IN_PIN] $OUTPUTPORT
+1
+set_driving_cell -library $REFLIB -lib_cell $BUFFER -pin $BUF_OUT_PIN -no_design_rule $INPUTPORT
+1
+# set_driving_cell -lib_cell PBIDIR_18_18_NT_DR -library io_gppr_cmos28lpp_t18_ss_0p950v_1p650v_125c -no_design_rule [all_inputs]
+# set_load [load_of io_gppr_cmos28lpp_t18_ss_0p950v_1p650v_125c/PBIDIR_18_18_NT_DR/A] [all_outputs]
+#set_wire_load_mode "top"
+#set auto_wire_load_selection false
+#set_wire_load_model -name zero-wire-load-model
+##ETC ATTRIBUTES
+#set_max_fanout 200 [all_inputs]
+#set_max_transition 1.5 [current_design]
+#set_max_capacitance 150 [current_design]
+# pin name of sub module was changed so dont touch
+# set_dont_touch UTOP/Ufifo
+# set_dont_touch UTOP/Umemory_wrapper
+# We usually don't know the external capaciatnce 
+# so insert buffers to isolate and protect inner logics
+set_isolate_ports $OUTPUTPORT
+1
+set_ideal_network [get_ports "CLK RESETn"]
+1
+# no through pass assign syntax => insert buffers
+set_fix_multiple_port_nets -all -buffer_constants -feedthroughs -constants
+1
+1
+#puts "RM-Info: Reading SDC file [which [dcrm_mcmm_filename ${DCRM_SDC_INPUT_FILE} ${scenario}]]\n"
+#constraint syntax is not based on SDC style.... so at first, just source and do read_sdc after write_sdc
+#read_sdc [dcrm_mcmm_filename ${DCRM_SDC_INPUT_FILE} ${scenario}]
+#set_operating_conditions -max_library <OC_WC_LIB_NAME> -max <OC_WC>
+#set_operating_conditions ff_1p100v_m40c -library sc9_cmos28lpp_base_rvt_ff_nominal_min_1p100v_m40c_sadhm -analysis_type on_chip_variation
+set_operating_conditions ff1p16vn40c -library saed32rvt_ff1p16vn40c -analysis_type on_chip_variation
+Using operating conditions 'ff1p16vn40c' found in library 'saed32rvt_ff1p16vn40c'.
+1
+# OCV variation from voltage IR-drop 3.6%
+set_timing_derate -late 1.036
+1
+#set_tlu_plus_files -max_tluplus <OC_WC_TLUPLUS_MAX_FILE> -tech2itf_map ${MAP_FILE}
+set_tlu_plus_files -max_tluplus $TLUPLUS_MAX_FILE -min_tluplus $TLUPLUS_MIN_FILE -tech2itf_map ${MAP_FILE}
+1
+check_tlu_plus_files
+
+Sanity check for TLU+ vs MW-Tech files:
+ mapping_file: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_tf_itf_tluplus.map
+ number of unique tlu+ files in mcmm mode: 2
+  /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus
+  /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+1
+# Include scenario specific SAIF file, if possible, for power analysis.
+# Otherwise, the default toggle rate of 0.1 will be used for propagating
+# switching activity.
+read_saif -auto_map_names -input ../SIM/FUNCTION/${DESIGN_NAME}.saif -instance TB_${DESIGN_NAME}/U${DESIGN_NAME} -verbose
+Error: Cannot find the SAIF file (../SIM/FUNCTION/TOP.saif). (PWR-201)
+0
+# Set options for worst case setup scenario
+set_scenario_options -setup true -hold false -leakage_power true  -dynamic_power true
+1
+report_scenario_options
+ 
+****************************************
+Report : scenario_options
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ff1p16vn40c
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:36:49 2022
+****************************************
+
+Scenario: mode_norm.OC_rvt_ff1p16vn40c is active.
+ setup         : true 
+ hold          : false 
+ leakage_power : true 
+ dynamic_power : true 
+
+ cts_mode      : false 
+ cts_corner    : none 
+
+1
+write_sdc -nosplit ${RESULTS_DIR}/[dcrm_mcmm_filename ${DCRM_FINAL_SDC_OUTPUT_FILE} ${scenario}]
+1
+1
+redirect -tee -file ${REPORTS_DIR}/04_${DESIGN_NAME}.check_timing {check_timing}
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Updating design information... (UID-85)
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+Warning: there are 8 input ports that only have partial input delay specified. (TIM-212)
+--------------------
+a[3]
+a[2]
+a[1]
+a[0]
+b[3]
+b[2]
+b[1]
+b[0]
+1
+current_scenario mode_norm.OC_rvt_ss0p95v125c
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+mode_norm.OC_rvt_ss0p95v125c
+set scenario [current_scenario]
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+mode_norm.OC_rvt_ss0p95v125c
+read_sdc [dcrm_mcmm_filename ${DCRM_SDC_INPUT_FILE} ${scenario}]
+
+Reading SDC version 2.1...
+Using operating conditions 'ss0p95v125c' found in library 'saed32rvt_ss0p95v125c'.
+1
+set_operating_conditions ss0p95v125c -library saed32rvt_ss0p95v125c -analysis_type on_chip_variation
+Using operating conditions 'ss0p95v125c' found in library 'saed32rvt_ss0p95v125c'.
+1
+current_scenario mode_norm.OC_rvt_ff1p16vn40c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+set scenario [current_scenario]
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+read_sdc [dcrm_mcmm_filename ${DCRM_SDC_INPUT_FILE} ${scenario}]
+
+Reading SDC version 2.1...
+Using operating conditions 'ff1p16vn40c' found in library 'saed32rvt_ff1p16vn40c'.
+1
+set_operating_conditions ff1p16vn40c -library saed32rvt_ff1p16vn40c -analysis_type on_chip_variation
+Using operating conditions 'ff1p16vn40c' found in library 'saed32rvt_ff1p16vn40c'.
+1
+report_scenarios > ${REPORTS_DIR}/05_${DCRM_MCMM_SCENARIOS_REPORT}
+# Below command outputs html files
+check_scenarios -output ${REPORTS_DIR}
+Report summary:
+Information: TLU+ file (mode_norm.OC_rvt_ss0p95v125c: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus) is under location different from design location.  (MCMM-231)
+Information: TLU+ file (mode_norm.OC_rvt_ss0p95v125c: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus) is under location different from design location.  (MCMM-231)
+Information: TLU+ file (mode_norm.OC_rvt_ss0p95v125c: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_tf_itf_tluplus.map) is under location different from design location.  (MCMM-231)
+Information: TLU+ file (mode_norm.OC_rvt_ff1p16vn40c: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus) is under location different from design location.  (MCMM-231)
+Information: TLU+ file (mode_norm.OC_rvt_ff1p16vn40c: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus) is under location different from design location.  (MCMM-231)
+Information: TLU+ file (mode_norm.OC_rvt_ff1p16vn40c: /data/SYNOPSYS/lib/32nm/SAED32_EDK/tech/star_rcxt/saed32nm_tf_itf_tluplus.map) is under location different from design location.  (MCMM-231)
+Warning: Design (TOP) has missing library cells.  (MCMM-223)
+Information: HTML report can be found at /home/capstone6/capstone/lab3/SYN_topo/reports/check_scenarios_22.html
+1
+redirect -tee -file ${REPORTS_DIR}/06_${DESIGN_NAME}.report_port.reports {report_port -verbose}
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : port
+        -verbose
+Design : TOP
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:36:52 2022
+****************************************
+
+
+
+Attributes:
+    i - ideal_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+CLK            in      0.0000   0.0000   --      --      --         i
+RESETn         in      0.0000   0.0000   --      --      --         i
+a[0]           in      0.0000   0.0000   --      --      --         
+a[1]           in      0.0000   0.0000   --      --      --         
+a[2]           in      0.0000   0.0000   --      --      --         
+a[3]           in      0.0000   0.0000   --      --      --         
+b[0]           in      0.0000   0.0000   --      --      --         
+b[1]           in      0.0000   0.0000   --      --      --         
+b[2]           in      0.0000   0.0000   --      --      --         
+b[3]           in      0.0000   0.0000   --      --      --         
+y[0]           out     0.5696   0.0000   --      --      --         
+y[1]           out     0.5696   0.0000   --      --      --         
+y[2]           out     0.5696   0.0000   --      --      --         
+y[3]           out     0.5696   0.0000   --      --      --         
+y[4]           out     0.5696   0.0000   --      --      --         
+y[5]           out     0.5696   0.0000   --      --      --         
+y[6]           out     0.5696   0.0000   --      --      --         
+y[7]           out     0.5696   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+CLK                1      --              --              --        -- 
+RESETn             1      --              --              --        -- 
+a[0]               1      --              --              --        -- 
+a[1]               1      --              --              --        -- 
+a[2]               1      --              --              --        -- 
+a[3]               1      --              --              --        -- 
+b[0]               1      --              --              --        -- 
+b[1]               1      --              --              --        -- 
+b[2]               1      --              --              --        -- 
+b[3]               1      --              --              --        -- 
+y[0]               1      --              --              --        -- 
+y[1]               1      --              --              --        -- 
+y[2]               1      --              --              --        -- 
+y[3]               1      --              --              --        -- 
+y[4]               1      --              --              --        -- 
+y[5]               1      --              --              --        -- 
+y[6]               1      --              --              --        -- 
+y[7]               1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+CLK           --      --      --      --      --      -- 
+RESETn        --      --      --      --      --      -- 
+a[0]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+a[1]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+a[2]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+a[3]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+b[0]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+b[1]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+b[2]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+b[3]          --      --      0.40    0.40  MAIN_CLOCK
+                                                      --    
+
+
+                    Driving Cell
+Input Port   Rise(min/max)      Fall(min/max)      Mult(min/max)  Attrs(min/max)
+--------------------------------------------------------------------------------
+a[0]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+a[1]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+a[2]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+a[3]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+b[0]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+b[1]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+b[2]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+b[3]         saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                saed32rvt_ff1p16vn40c/NBUFFX2_RVT/Y
+                                                     -- /  --     n,N
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+CLK           --      --     --      --     --      --     --     --        -- 
+RESETn        --      --     --      --     --      --     --     --        -- 
+a[0]          --      --     --      --     --      --     --     --        -- 
+a[1]          --      --     --      --     --      --     --     --        -- 
+a[2]          --      --     --      --     --      --     --     --        -- 
+a[3]          --      --     --      --     --      --     --     --        -- 
+b[0]          --      --     --      --     --      --     --     --        -- 
+b[1]          --      --     --      --     --      --     --     --        -- 
+b[2]          --      --     --      --     --      --     --     --        -- 
+b[3]          --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+CLK           --      --      --      -- 
+RESETn        --      --      --      -- 
+a[0]          --      --      --      -- 
+a[1]          --      --      --      -- 
+a[2]          --      --      --      -- 
+a[3]          --      --      --      -- 
+b[0]          --      --      --      -- 
+b[1]          --      --      --      -- 
+b[2]          --      --      --      -- 
+b[3]          --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+y[0]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[1]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[2]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[3]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[4]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[5]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[6]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+y[7]          --      --      0.30    0.30  MAIN_CLOCK
+                                                      0.00  
+
+1
+set current_scenario_saved [current_scenario]
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+foreach scenario [all_active_scenarios] {
+  current_scenario ${scenario}
+  set ports_clock_root [filter_collection [get_attribute [get_clocks] sources] object_class==port]
+  group_path -name REGOUT -to [all_outputs] 
+  group_path -name REGIN -from [remove_from_collection [all_inputs] ${ports_clock_root}] 
+  group_path -name FEEDTHROUGH -from [remove_from_collection [all_inputs] ${ports_clock_root}] -to [all_outputs]
+}
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+current_scenario ${current_scenario_saved}
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+set_clock_gating_style -positive_edge_logic {integrated}
+Error: The library cell required for use as an integrated clock-gating cell does not exist in the libraries specified.  The required attribute is latch_posedge.  (PWR-191)
+Warning: The clock-gating style was not changed. (PWR-132)
+
+Current clock gating style....
+Sequential cell: latch
+Minimum bank bitwidth: 3
+Minimum bank bitwidth for enhanced clock gating: 6
+Maximum fanout: unlimited
+Setup time for clock gate: -
+Hold time for clock gate: -
+Clock gating circuitry (positive edge): integrated
+Clock gating circuitry (negative edge): integrated
+ Note: inverter between clock gating circuitry 
+       and (negative edge) register clock pin.
+Control point insertion: before
+Control signal for control point: scan_enable
+Observation point insertion: false
+Observation logic depth: 5
+0
+if {[shell_is_in_topographical_mode]} {
+
+if { ${MIN_ROUTING_LAYER} != ""} {
+set_ignored_layers -min_routing_layer ${MIN_ROUTING_LAYER}
+}
+if { ${MAX_ROUTING_LAYER} != ""} {
+set_ignored_layers -max_routing_layer ${MAX_ROUTING_LAYER}
+}
+
+report_ignored_layers
+
+if {[file exists [which ${DCRM_DCT_DEF_INPUT_FILE}]]} {
+  puts "RM-Info: Reading in DEF file [which ${DCRM_DCT_DEF_INPUT_FILE}]\n"
+  extract_physical_constraints ${DCRM_DCT_DEF_INPUT_FILE}
+  if { $OPTIMIZATION_FLOW == "hplp"} {
+    extract_physical_constraints -allow_physical_cells ${DCRM_DCT_DEF_INPUT_FILE}  
+  }
+}
+
+if {[file exists [which ${DCRM_DCT_FLOORPLAN_INPUT_FILE}.objects]]} {
+  puts "RM-Info: Reading in secondary floorplan file [which ${DCRM_DCT_FLOORPLAN_INPUT_FILE}.objects]\n"
+  read_floorplan ${DCRM_DCT_FLOORPLAN_INPUT_FILE}.objects
+}
+
+if {[file exists [which ${DCRM_DCT_FLOORPLAN_INPUT_FILE}]]} {
+  puts "RM-Info: Reading in floorplan file [which ${DCRM_DCT_FLOORPLAN_INPUT_FILE}]\n"
+  read_floorplan ${DCRM_DCT_FLOORPLAN_INPUT_FILE}
+}
+
+if {[file exists [which ${DCRM_DCT_PHYSICAL_CONSTRAINTS_INPUT_FILE}]]} {
+  set_app_var enable_rule_based_query true
+  puts "RM-Info: Sourcing script file [which ${DCRM_DCT_PHYSICAL_CONSTRAINTS_INPUT_FILE}]\n"
+  source -echo -verbose ${DCRM_DCT_PHYSICAL_CONSTRAINTS_INPUT_FILE}
+  set_app_var enable_rule_based_query false 
+}
+
+write_floorplan -all ${RESULTS_DIR}/${DCRM_DCT_FLOORPLAN_OUTPUT_FILE}
+
+report_physical_constraints > ${REPORTS_DIR}/${DCRM_DCT_PHYSICAL_CONSTRAINTS_REPORT}
+}
+Information: linking reference library : /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m. (PSYN-878)
+
+  Linking design 'TOP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /home/capstone6/capstone/lab3/SYN_topo/TOP.db, etc
+  saed32rvt_ff1p16vn40c (library)
+                              /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db
+  saed32rvt_ss0p95v125c (library)
+                              /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db
+  dw_foundation.sldb (library)
+                              /data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/dw_foundation.sldb
+
+Information: No preferred routing direction is found for design layer M1. Automatically deriving direction H. (DCT-035)
+Information: No preferred routing direction is found for design layer M2. Automatically deriving direction V. (DCT-035)
+Information: No preferred routing direction is found for design layer M3. Automatically deriving direction H. (DCT-035)
+Information: No preferred routing direction is found for design layer M4. Automatically deriving direction V. (DCT-035)
+Information: No preferred routing direction is found for design layer M5. Automatically deriving direction H. (DCT-035)
+Information: No preferred routing direction is found for design layer M6. Automatically deriving direction V. (DCT-035)
+Information: No preferred routing direction is found for design layer M7. Automatically deriving direction H. (DCT-035)
+Information: No preferred routing direction is found for design layer M8. Automatically deriving direction V. (DCT-035)
+Information: No preferred routing direction is found for design layer M9. Automatically deriving direction H. (DCT-035)
+Information: No preferred routing direction is found for design layer MRDL. Automatically deriving direction V. (DCT-035)
+Information: setting M1 as min routing layer.  (PSYN-179)
+Information: setting M8 as ignored_layer due to min_max layer setting. (PSYN-178)
+Information: setting M9 as ignored_layer due to min_max layer setting. (PSYN-178)
+Information: setting MRDL as ignored_layer due to min_max layer setting. (PSYN-178)
+Information: setting M7 as max routing layer.  (PSYN-179)
+Ignored layers in congestion analysis and RC estimation: M8 M9 MRDL 
+
+Min_routing_layer: M1
+Max_routing_layer: M7
+Warning: File 'TOP.def' was not found in search path. (CMD-030)
+Warning: File 'TOP.fp.objects' was not found in search path. (CMD-030)
+Warning: File 'TOP.fp' was not found in search path. (CMD-030)
+Warning: File 'TOP.physical_constraints.tcl' was not found in search path. (CMD-030)
+set_fix_multiple_port_nets -all -buffer_constants
+1
+check_design -summary
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP4
+Date:        Wed Oct 26 12:36:52 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Unconnected ports (LINT-28)                                     1
+--------------------------------------------------------------------------------
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-98)
+
+1
+check_design > ${REPORTS_DIR}/07_${DCRM_CHECK_DESIGN_REPORT}
+set_app_var compile_timing_high_effort true
+true
+set_app_var placer_max_cell_density_threshold 0.75        
+0.75
+set_app_var psynopt_tns_high_effort true
+true
+set_app_var power_cg_physically_aware_cg true
+true
+set_app_var placer_tns_driven true
+true
+set_app_var power_low_power_placement true
+true
+set_dynamic_optimization true
+Error: The set_dynamic_optimization command cannot be set within a scenario. (PWR-838)
+1
+set_app_var compile_register_replication_across_hierarchy true 
+true
+compile_ultra -spg -no_autoungroup -check_only > ${REPORTS_DIR}/${DESIGN_NAME}.compile_ultra_check_only.rpt
+# compile_ultra -scan -gate_clock -spg
+# compile_ultra -scan -gate_clock -spg > ${REPORTS_DIR}/${DESIGN_NAME}.compile_ultra.rpt
+# compile_ultra -spg -no_autoungroup > ${REPORTS_DIR}/08_${DESIGN_NAME}.compile_ultra.rpt
+compile_ultra -spg -no_autoungroup > ${REPORTS_DIR}/${DESIGN_NAME}.compile_ultra.rpt
+write -format ddc -hierarchy -output ${RESULTS_DIR}/${DCRM_COMPILE_ULTRA_DDC_OUTPUT_FILE}
+Writing ddc file 'results/TOP.compile_ultra.ddc'.
+1
+change_names -rules verilog -hierarchy
+1
+write_icc2_files -force  -output ${RESULTS_DIR}/${DCRM_FINAL_DESIGN_ICC2}
+Information: During the execution of write_icc2_files warning messages were issued, please check results/ICC2_files/write_icc2_files.log files. (DCT-228)
+1
+write -format verilog -hierarchy -output ${RESULTS_DIR}/${DCRM_FINAL_VERILOG_OUTPUT_FILE}
+Writing verilog file '/home/capstone6/capstone/lab3/SYN_topo/results/TOP.mapped.v'.
+1
+write -format ddc     -hierarchy -output ${RESULTS_DIR}/${DCRM_FINAL_DDC_OUTPUT_FILE}
+Writing ddc file 'results/TOP.mapped.ddc'.
+1
+set_svf -off
+1
+write_scan_def -output ${RESULTS_DIR}/${DCRM_DFT_FINAL_SCANDEF_OUTPUT_FILE}
+Error: Current design TOP does not have any CTL model attached. ScanDEF generation cannot proceed.
+0
+check_scan_def > ${REPORTS_DIR}/${DCRM_DFT_FINAL_CHECK_SCAN_DEF_REPORT}
+write_test_model -format ctl -output ${RESULTS_DIR}/${DCRM_DFT_FINAL_CTL_OUTPUT_FILE}
+Error: Design 'TOP' has no test model. (UIT-453)
+0
+report_dft_signal > ${REPORTS_DIR}/${DCRM_DFT_FINAL_DFT_SIGNALS_REPORT}
+write_test_protocol -test_mode Internal_scan -output ${RESULTS_DIR}/${DCRM_DFT_FINAL_PROTOCOL_OUTPUT_FILE}
+Error: Design 'TOP' has no test model. (UIT-453)
+0
+current_test_mode Internal_scan
+Error: Design 'TOP' has no test model. (UIT-453)
+0
+report_scan_path > ${REPORTS_DIR}/${DCRM_DFT_FINAL_SCAN_PATH_REPORT}
+dft_drc
+Error: No model found on design
+0
+dft_drc -verbose > ${REPORTS_DIR}/${DCRM_DFT_DRC_FINAL_REPORT}
+write_test_protocol -test_mode ScanCompression_mode -output ${RESULTS_DIR}/${DCRM_DFT_FINAL_SCAN_COMPR_PROTOCOL_OUTPUT_FILE}
+Error: Design 'TOP' has no test model. (UIT-453)
+0
+current_test_mode ScanCompression_mode
+Error: Design 'TOP' has no test model. (UIT-453)
+0
+report_scan_path > ${REPORTS_DIR}/${DCRM_DFT_FINAL_SCAN_COMPR_SCAN_PATH_REPORT}
+dft_drc 
+Error: No model found on design
+0
+dft_drc -verbose > ${REPORTS_DIR}/${DCRM_DFT_DRC_FINAL_SCAN_COMPR_REPORT}
+write_floorplan -all ${RESULTS_DIR}/${DCRM_DCT_FINAL_FLOORPLAN_OUTPUT_FILE}
+1
+if {[info exists DCRM_DCT_SPG_PLACEMENT_OUTPUT_FILE]} {
+  write_def -components -output ${RESULTS_DIR}/${DCRM_DCT_SPG_PLACEMENT_OUTPUT_FILE}
+}
+set_app_var write_sdc_output_lumped_net_capacitance false
+false
+set_app_var write_sdc_output_net_resistance false
+false
+set all_active_scenario_saved [all_active_scenarios]
+mode_norm.OC_rvt_ss0p95v125c mode_norm.OC_rvt_ff1p16vn40c
+set current_scenario_saved [current_scenario]
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+set_active_scenarios -all
+Info: all scenarios are active.
+1
+foreach scenario [all_active_scenarios] {
+  current_scenario ${scenario}
+  write_parasitics -output ${RESULTS_DIR}/[dcrm_mcmm_filename ${DCRM_DCT_FINAL_SPEF_OUTPUT_FILE} ${scenario}]
+  write_sdf ${RESULTS_DIR}/[dcrm_mcmm_filename ${DCRM_DCT_FINAL_SDF_OUTPUT_FILE} ${scenario}]
+}
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+Information: Writing parasitics to file '/home/capstone6/capstone/lab3/SYN_topo/results/TOP.mapped.mode_norm.OC_rvt_ss0p95v125c.spef'. (WP-3)
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/capstone6/capstone/lab3/SYN_topo/results/TOP.mapped.mode_norm.OC_rvt_ss0p95v125c.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+Information: Writing parasitics to file '/home/capstone6/capstone/lab3/SYN_topo/results/TOP.mapped.mode_norm.OC_rvt_ff1p16vn40c.spef'. (WP-3)
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/capstone6/capstone/lab3/SYN_topo/results/TOP.mapped.mode_norm.OC_rvt_ff1p16vn40c.sdf'. (WT-3)
+current_scenario ${current_scenario_saved}
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+set_active_scenarios ${all_active_scenario_saved}
+1
+saif_map -type ptpx -write_map ${RESULTS_DIR}/${DESIGN_NAME}.mapped.SAIF.namemap
+Information: Writing SAIF name mapping information into the PT-PX name mapping file 'results/TOP.mapped.SAIF.namemap'. (PWR-636)
+1
+report_constraint -all_violators -verbose >> ${REPORTS_DIR}/10_${DESIGN_NAME}.report_constraint.reports
+report_qor > ${REPORTS_DIR}/11_${DCRM_FINAL_QOR_REPORT}
+report_timing -scenarios [all_active_scenarios] -transition_time -nets -attributes -nosplit > ${REPORTS_DIR}/12_${DCRM_FINAL_TIMING_REPORT}
+report_tlu_plus_files  > ${REPORTS_DIR}/13_report_tlu_plus_files.reports
+report_area -physical -nosplit > ${REPORTS_DIR}/14_${DCRM_FINAL_AREA_REPORT}
+report_area -designware  > ${REPORTS_DIR}/15_${DCRM_FINAL_DESIGNWARE_AREA_REPORT}
+report_resources -hierarchy > ${REPORTS_DIR}/16_${DCRM_FINAL_RESOURCES_REPORT}
+report_clock_gating -nosplit > ${REPORTS_DIR}/17_${DCRM_FINAL_CLOCK_GATING_REPORT}
+set icc_snapshot_storage_location ${REPORTS_DIR}/${DCRM_DCT_FINAL_QOR_SNAPSHOT_FOLDER}
+reports/TOP.qor_snapshot
+create_qor_snapshot -name ${DCRM_DCT_FINAL_QOR_SNAPSHOT_REPORT} > ${REPORTS_DIR}/${DCRM_DCT_FINAL_QOR_SNAPSHOT_REPORT}
+set current_scenario_saved [current_scenario]
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+foreach scenario [all_active_scenarios] {
+  current_scenario ${scenario}
+  report_saif -hierarchy -missing -rtl_saif > ${RESULTS_DIR}/${DESIGN_NAME}_${current_scenario_saved}.saif
+}
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+current_scenario ${current_scenario_saved}
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+report_power -analysis_effort high -verbose -scenarios [all_active_scenarios] -nosplit > ${REPORTS_DIR}/18_${DCRM_FINAL_POWER_REPORT}
+report_clock_gating -nosplit > ${REPORTS_DIR}/19_${DCRM_FINAL_CLOCK_GATING_REPORT}
+report_congestion > ${REPORTS_DIR}/20_${DCRM_DCT_FINAL_CONGESTION_REPORT}
+gui_start
+Current design is 'TOP'.
+4.1
+set MyLayout [gui_create_window -type LayoutWindow]
+Current design is 'TOP'.
+LayoutWindow.1
+report_congestion -build_map
+Information: Reporting congestion information from cached data. (DCT-246)
+1
+gui_show_map -map "Global Route Congestion" -show true
+gui_zoom -window [gui_get_current_window -view] -full
+gui_write_window_image -format png -file ${REPORTS_DIR}/${DCRM_DCT_FINAL_CONGESTION_MAP_OUTPUT_FILE}
+1
+gui_write_window_image -window ${MyLayout} -format png -file ${REPORTS_DIR}/${DCRM_DCT_FINAL_CONGESTION_MAP_WINDOW_OUTPUT_FILE}
+1
+gui_stop
+To restart the GUI, type 'gui_start'.
+write_milkyway -overwrite -output ${DCRM_FINAL_MW_CEL_NAME}
+1
+gui_start
+Current design is 'TOP'.
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell-topo> Loading db file '/data/SYNOPSYS/syn/2018.06-SP4/libraries/syn/generic.sdb'
+Current design is 'TOP'.
+dc_shell-topo> dc_shell-topo>  
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ff1p16vn40c
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:38:15 2022
+****************************************
+
+ * Some/all delay information is back-annotated.
+Wire Load Model Mode: Inactive.
+
+  Startpoint: PAM/a_pipe_reg_0__1_
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: PAM/partials_reg_1__4_
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00      
+  clock network delay (ideal)                             0.10       0.10      
+  PAM/a_pipe_reg_0__1_/CLK (DFFX1_RVT)                    0.00       0.10 r    1.16
+  PAM/a_pipe_reg_0__1_/Q (DFFX1_RVT)                      0.06       0.16 r    1.16
+  PAM/U3/Y (NAND3X0_RVT)                                  0.02 *     0.18 f    1.16
+  PAM/U4/Y (INVX0_RVT)                                    0.02 *     0.20 r    1.16
+  PAM/U36/CO (FADDX1_RVT)                                 0.03 *     0.24 r    1.16
+  PAM/U37/CO (FADDX1_RVT)                                 0.03 *     0.27 r    1.16
+  PAM/U7/Y (NAND2X0_RVT)                                  0.02 *     0.29 f    1.16
+  PAM/U8/Y (AND2X1_RVT)                                   0.02 *     0.31 f    1.16
+  PAM/U10/Y (AND2X1_RVT)                                  0.02 *     0.32 f    1.16
+  PAM/partials_reg_1__4_/D (DFFX1_RVT)                    0.00 *     0.32 f    1.16
+  data arrival time                                                  0.32      
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00      
+  clock network delay (ideal)                             0.10       5.10      
+  clock uncertainty                                      -0.50       4.60      
+  PAM/partials_reg_1__4_/CLK (DFFX1_RVT)                  0.00       4.60 r    
+  library setup time                                     -0.01       4.59      
+  data required time                                                 4.59      
+  ------------------------------------------------------------------------------------
+  data required time                                                 4.59      
+  data arrival time                                                 -0.32      
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                        4.27      
+
+
+  Startpoint: a[0] (input port clocked by MAIN_CLOCK)
+  Endpoint: PAM/partials_reg_0__0_
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c
+  Path Group: REGIN
+  Path Type: max
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00      
+  clock network delay (ideal)                             0.10       0.10      
+  input external delay                                    0.40       0.50 r    
+  a[0] (in)                                               0.00       0.50 r    
+  PAM/a[0] (pipe_array_mult)                              0.00       0.50 r    
+  PAM/U32/Y (AND2X1_RVT)                                  0.02 *     0.52 r    1.16
+  PAM/partials_reg_0__0_/D (DFFX1_RVT)                    0.00 *     0.52 r    1.16
+  data arrival time                                                  0.52      
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00      
+  clock network delay (ideal)                             0.10       5.10      
+  clock uncertainty                                      -0.50       4.60      
+  PAM/partials_reg_0__0_/CLK (DFFX1_RVT)                  0.00       4.60 r    
+  library setup time                                     -0.01       4.59      
+  data required time                                                 4.59      
+  ------------------------------------------------------------------------------------
+  data required time                                                 4.59      
+  data arrival time                                                 -0.52      
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                        4.06      
+
+
+  Startpoint: PAM/partials_reg_3__5_
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: y[5] (output port clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c
+  Path Group: REGOUT
+  Path Type: max
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00      
+  clock network delay (ideal)                             0.10       0.10      
+  PAM/partials_reg_3__5_/CLK (DFFX1_RVT)                  0.00       0.10 r    1.16
+  PAM/partials_reg_3__5_/Q (DFFX1_RVT)                    0.06       0.16 f    1.16
+  PAM/y[5] (pipe_array_mult)                              0.00       0.16 f    
+  y[5] (out)                                              0.00 *     0.16 f    
+  data arrival time                                                  0.16      
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00      
+  clock network delay (ideal)                             0.10       5.10      
+  clock uncertainty                                      -0.50       4.60      
+  output external delay                                  -0.30       4.30      
+  data required time                                                 4.30      
+  ------------------------------------------------------------------------------------
+  data required time                                                 4.30      
+  data arrival time                                                 -0.16      
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                        4.14      
+
+
+1
+dc_shell-topo> 
+Information: Ignoring interrupt signal since design is being mapped.
+             One more interrupt will abort optimization without
+             transferring the design... (INT-7)
+
+Information: Aborting optimization without transferring the design... (INT-8)
+
+Information: Process terminated by interrupt. (INT-4)

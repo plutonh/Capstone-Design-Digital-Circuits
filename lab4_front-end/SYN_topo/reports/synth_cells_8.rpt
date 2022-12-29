@@ -1,0 +1,813 @@
+ 
+****************************************
+Report : cell
+Design : mul_A_bw8
+Version: O-2018.06-SP4
+Date   : Mon Oct 31 23:23:46 2022
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+   mo - map_only
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U238                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U239                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U240                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U241                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U242                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U243                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U244                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U245                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U246                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U247                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U248                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U249                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U250                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U251                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U252                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U253                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U254                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U255                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U256                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U257                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U258                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U259                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U260                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U262                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U263                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U264                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U265                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U266                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U267                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U268                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U269                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U270                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U271                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U272                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U273                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U274                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U275                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U276                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U277                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U278                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U279                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U280                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U281                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U282                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U283                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U284                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U285                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U286                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U287                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U288                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U289                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U290                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U291                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U292                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U293                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U294                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U295                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U296                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U297                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U298                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U299                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U300                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U301                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U303                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U304                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U305                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U306                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U307                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U308                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U309                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U310                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U311                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U312                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U313                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U314                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U315                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U316                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U317                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U318                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U319                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U320                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U321                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U322                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U323                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U324                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U325                      NBUFFX2_RVT     saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U326                      NBUFFX2_RVT     saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U327                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U328                      NBUFFX2_RVT     saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U329                      INVX1_RVT       saed32rvt_ff1p16vn40c
+                                                          1.270720  
+U330                      NBUFFX2_RVT     saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U331                      NBUFFX2_RVT     saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U332                      NOR2X0_RVT      saed32rvt_ff1p16vn40c
+                                                          2.541440  
+U333                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U334                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U335                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U336                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U337                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U338                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U339                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U340                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U341                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U342                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U343                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U344                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U345                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U346                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U347                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U348                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U349                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U350                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U351                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U352                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U353                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U354                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U355                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U356                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U357                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U358                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U359                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U360                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U361                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U362                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U363                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U364                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U365                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U366                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U367                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U368                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U369                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U370                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U371                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+U372                      AND2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          2.033152  
+U373                      XOR2X1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.320448  
+a_pipe_reg[0][0]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[0][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[0][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[0][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[0][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[0][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[0][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[0][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[1][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[1][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[1][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[1][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[1][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[1][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[1][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[2][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[2][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[2][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[2][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[2][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[2][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[3][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[3][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[3][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[3][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[3][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[4][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[4][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[4][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[4][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[5][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[5][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[5][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[6][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[6][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+a_pipe_reg[7][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+add_30_G2/U1_2            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G2/U1_3            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G2/U1_4            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G2/U1_5            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G2/U1_6            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G2/U1_7            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G3/U1_3            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G3/U1_4            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G3/U1_5            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G3/U1_6            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G3/U1_7            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G3/U1_8            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G3/U1_9            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G4/U1_4            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G4/U1_5            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G4/U1_6            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G4/U1_7            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G4/U1_8            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G4/U1_9            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G4/U1_10           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G5/U1_5            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G5/U1_6            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G5/U1_7            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G5/U1_8            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G5/U1_9            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G5/U1_10           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G5/U1_11           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G6/U1_6            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G6/U1_7            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G6/U1_8            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G6/U1_9            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G6/U1_10           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G6/U1_11           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G6/U1_12           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G7/U1_7            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G7/U1_8            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G7/U1_9            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G7/U1_10           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G7/U1_11           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G7/U1_12           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G7/U1_13           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G8/U1_8            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G8/U1_9            FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G8/U1_10           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G8/U1_11           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G8/U1_12           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G8/U1_13           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+add_30_G8/U1_14           FADDX1_RVT      saed32rvt_ff1p16vn40c
+                                                          4.828736  mo, r
+b_pipe_reg[0][0]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[0][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[0][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[0][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[0][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[0][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[0][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[0][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[1][0]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[1][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[1][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[1][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[1][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[1][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[1][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[1][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[2][0]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[2][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[2][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[2][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[2][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[2][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[2][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[2][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[3][0]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[3][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[3][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[3][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[3][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[3][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[3][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[3][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[4][0]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[4][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[4][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[4][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[4][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[4][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[4][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[4][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[5][0]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[5][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[5][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[5][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[5][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[5][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[5][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[5][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[6][0]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[6][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[6][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[6][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[6][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[6][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[6][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[6][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[7][0]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[7][1]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[7][2]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[7][3]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[7][4]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[7][5]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[7][6]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+b_pipe_reg[7][7]          DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[0][0]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[0][1]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[0][2]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[0][3]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[0][4]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[0][5]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[0][6]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[0][7]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][0]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][1]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][2]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][3]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][4]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][5]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][6]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][7]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][8]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[1][9]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][0]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][1]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][2]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][3]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][4]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][5]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][6]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][7]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][8]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][9]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][10]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][11]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][12]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][13]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][14]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[2][15]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][0]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][1]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][2]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][3]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][4]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][5]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][6]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][7]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][8]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][9]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][10]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][11]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][12]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][13]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][14]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[3][15]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][0]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][1]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][2]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][3]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][4]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][5]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][6]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][7]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][8]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][9]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][10]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][11]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][12]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][13]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][14]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[4][15]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][0]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][1]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][2]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][3]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][4]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][5]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][6]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][7]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][8]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][9]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][10]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][11]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][12]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][13]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][14]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[5][15]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][0]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][1]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][2]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][3]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][4]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][5]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][6]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][7]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][8]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][9]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][10]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][11]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][12]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][13]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][14]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[6][15]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][0]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][1]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][2]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][3]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][4]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][5]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][6]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][7]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][8]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][9]        DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][10]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][11]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][12]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][13]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][14]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+partials_reg[7][15]       DFFSSRX1_RVT    saed32rvt_ff1p16vn40c
+                                                          7.116032  n
+--------------------------------------------------------------------------------
+Total 396 cells                                           2061.870297
+1

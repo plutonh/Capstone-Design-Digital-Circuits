@@ -1,0 +1,232 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ss0p95v125c mode_norm.OC_rvt_ff1p16vn40c
+Version: O-2018.06-SP4
+Date   : Mon Oct  3 17:19:28 2022
+****************************************
+
+ * Some/all delay information is back-annotated.
+Wire Load Model Mode: Inactive.
+
+  Startpoint: c[0] (input port clocked by MAIN_CLOCK)
+  Endpoint: Np1/y_reg_7_
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ss0p95v125c
+  Path Group: REGIN
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                        Fanout     Trans      Incr       Path      Attributes     Voltage
+  ----------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                       0.00       0.00                     
+  clock network delay (ideal)                        0.10       0.10                     
+  input external delay                               0.40       0.50 r                   
+  c[0] (in)                                0.02      0.01       0.51 r                   
+  c[0] (net)                     2                   0.00       0.51 r                   
+  Np1/c[0] (no_pipeline)                             0.00       0.51 r                   
+  Np1/c[0] (net)                                     0.00       0.51 r                   
+  Np1/U5/Y (NAND2X0_RVT)                   0.04      0.04 *     0.55 f                   0.95
+  Np1/n2 (net)                   2                   0.00       0.55 f                   
+  Np1/U9/Y (INVX0_RVT)                     0.04      0.04 *     0.59 r                   0.95
+  Np1/n6 (net)                   1                   0.00       0.59 r                   
+  Np1/U16/CO (FADDX1_RVT)                  0.05      0.09 *     0.68 r                   0.95
+  Np1/n3 (net)                   1                   0.00       0.68 r                   
+  Np1/U11/S (FADDX1_RVT)                   0.05      0.16 *     0.84 f                   0.95
+  Np1/n31 (net)                  4                   0.00       0.84 f                   
+  Np1/U10/Y (AND2X1_RVT)                   0.04      0.08 *     0.92 f                   0.95
+  Np1/n14 (net)                  2                   0.00       0.92 f                   
+  Np1/U19/Y (NAND3X0_RVT)                  0.06      0.05 *     0.97 r                   0.95
+  Np1/n8 (net)                   2                   0.00       0.97 r                   
+  Np1/U22/Y (OA221X1_RVT)                  0.05      0.09 *     1.06 r                   0.95
+  Np1/n11 (net)                  1                   0.00       1.06 r                   
+  Np1/U26/CO (FADDX1_RVT)                  0.05      0.12 *     1.17 r                   0.95
+  Np1/n18 (net)                  1                   0.00       1.17 r                   
+  Np1/U34/CO (FADDX1_RVT)                  0.05      0.10 *     1.27 r                   0.95
+  Np1/n24 (net)                  1                   0.00       1.27 r                   
+  Np1/U36/CO (FADDX1_RVT)                  0.04      0.09 *     1.36 r                   0.95
+  Np1/n27 (net)                  1                   0.00       1.36 r                   
+  Np1/U37/Y (NBUFFX2_RVT)                  0.03      0.05 *     1.42 r                   0.95
+  Np1/n42 (net)                  2                   0.00       1.42 r                   
+  Np1/U41/Y (OA21X1_RVT)                   0.04      0.07 *     1.49 r                   0.95
+  Np1/n39 (net)                  2                   0.00       1.49 r                   
+  Np1/U43/Y (OA21X1_RVT)                   0.04      0.08 *     1.57 r                   0.95
+  Np1/N16 (net)                  1                   0.00       1.57 r                   
+  Np1/y_reg_7_/D (DFFARX1_RVT)             0.04      0.00 *     1.57 r                   0.95
+  data arrival time                                             1.57                     
+
+  clock MAIN_CLOCK (rise edge)                       5.00       5.00                     
+  clock network delay (ideal)                        0.10       5.10                     
+  clock uncertainty                                 -0.50       4.60                     
+  Np1/y_reg_7_/CLK (DFFARX1_RVT)                     0.00       4.60 r                   
+  library setup time                                -0.05       4.55                     
+  data required time                                            4.55                     
+  ----------------------------------------------------------------------------------------------------
+  data required time                                            4.55                     
+  data arrival time                                            -1.57                     
+  ----------------------------------------------------------------------------------------------------
+  slack (MET)                                                   2.98                     
+
+
+  Startpoint: Np1/y_reg_3_
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: y[3] (output port clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ss0p95v125c
+  Path Group: REGOUT
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                        Fanout     Trans      Incr       Path      Attributes     Voltage
+  ----------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                       0.00       0.00                     
+  clock network delay (ideal)                        0.10       0.10                     
+  Np1/y_reg_3_/CLK (DFFARX1_RVT)           0.10      0.00       0.10 r    i              0.95
+  Np1/y_reg_3_/Q (DFFARX1_RVT)             0.03      0.20       0.30 r                   0.95
+  Np1/y[3] (net)                 1                   0.00       0.30 r                   
+  Np1/y[3] (no_pipeline)                             0.00       0.30 r                   
+  y[3] (net)                                         0.00       0.30 r                   
+  y[3] (out)                               0.03      0.00 *     0.30 r                   
+  data arrival time                                             0.30                     
+
+  clock MAIN_CLOCK (rise edge)                       5.00       5.00                     
+  clock network delay (ideal)                        0.10       5.10                     
+  clock uncertainty                                 -0.50       4.60                     
+  output external delay                             -0.30       4.30                     
+  data required time                                            4.30                     
+  ----------------------------------------------------------------------------------------------------
+  data required time                                            4.30                     
+  data arrival time                                            -0.30                     
+  ----------------------------------------------------------------------------------------------------
+  slack (MET)                                                   4.00                     
+
+
+  Startpoint: c[0] (input port clocked by MAIN_CLOCK)
+  Endpoint: Np1/y_reg_6_
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c
+  Path Group: REGIN
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                        Fanout     Trans      Incr       Path      Attributes     Voltage
+  ----------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                       0.00       0.00                     
+  clock network delay (ideal)                        0.10       0.10                     
+  input external delay                               0.40       0.50 r                   
+  c[0] (in)                                0.01      0.00       0.50 r                   
+  c[0] (net)                     2                   0.00       0.50 r                   
+  Np1/c[0] (no_pipeline)                             0.00       0.50 r                   
+  Np1/c[0] (net)                                     0.00       0.50 r                   
+  Np1/U5/Y (NAND2X0_RVT)                   0.02      0.01 *     0.52 f                   1.16
+  Np1/n2 (net)                   2                   0.00       0.52 f                   
+  Np1/U9/Y (INVX0_RVT)                     0.02      0.01 *     0.53 r                   1.16
+  Np1/n6 (net)                   1                   0.00       0.53 r                   
+  Np1/U16/CO (FADDX1_RVT)                  0.02      0.03 *     0.56 r                   1.16
+  Np1/n3 (net)                   1                   0.00       0.56 r                   
+  Np1/U11/S (FADDX1_RVT)                   0.02      0.05 *     0.61 f                   1.16
+  Np1/n31 (net)                  4                   0.00       0.61 f                   
+  Np1/U10/Y (AND2X1_RVT)                   0.02      0.03 *     0.64 f                   1.16
+  Np1/n14 (net)                  2                   0.00       0.64 f                   
+  Np1/U19/Y (NAND3X0_RVT)                  0.02      0.02 *     0.66 r                   1.16
+  Np1/n8 (net)                   2                   0.00       0.66 r                   
+  Np1/U22/Y (OA221X1_RVT)                  0.02      0.03 *     0.69 r                   1.16
+  Np1/n11 (net)                  1                   0.00       0.69 r                   
+  Np1/U26/CO (FADDX1_RVT)                  0.02      0.04 *     0.72 r                   1.16
+  Np1/n18 (net)                  1                   0.00       0.72 r                   
+  Np1/U34/CO (FADDX1_RVT)                  0.02      0.03 *     0.76 r                   1.16
+  Np1/n24 (net)                  1                   0.00       0.76 r                   
+  Np1/U36/CO (FADDX1_RVT)                  0.02      0.03 *     0.79 r                   1.16
+  Np1/n27 (net)                  1                   0.00       0.79 r                   
+  Np1/U37/Y (NBUFFX2_RVT)                  0.01      0.02 *     0.80 r                   1.16
+  Np1/n42 (net)                  2                   0.00       0.80 r                   
+  Np1/U41/Y (OA21X1_RVT)                   0.02      0.02 *     0.83 r                   1.16
+  Np1/n39 (net)                  2                   0.00       0.83 r                   
+  Np1/U46/SO (HADDX1_RVT)                  0.01      0.03 *     0.86 f                   1.16
+  Np1/N15 (net)                  1                   0.00       0.86 f                   
+  Np1/y_reg_6_/D (DFFARX1_RVT)             0.01      0.00 *     0.86 f                   1.16
+  data arrival time                                             0.86                     
+
+  clock MAIN_CLOCK (rise edge)                       5.00       5.00                     
+  clock network delay (ideal)                        0.10       5.10                     
+  clock uncertainty                                 -0.50       4.60                     
+  Np1/y_reg_6_/CLK (DFFARX1_RVT)                     0.00       4.60 r                   
+  library setup time                                -0.01       4.59                     
+  data required time                                            4.59                     
+  ----------------------------------------------------------------------------------------------------
+  data required time                                            4.59                     
+  data arrival time                                            -0.86                     
+  ----------------------------------------------------------------------------------------------------
+  slack (MET)                                                   3.73                     
+
+
+  Startpoint: Np1/y_reg_3_
+              (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: y[3] (output port clocked by MAIN_CLOCK)
+  Scenario: mode_norm.OC_rvt_ff1p16vn40c
+  Path Group: REGOUT
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+   ao - always_on
+  inf - infeasible path
+
+  Point                        Fanout     Trans      Incr       Path      Attributes     Voltage
+  ----------------------------------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                       0.00       0.00                     
+  clock network delay (ideal)                        0.10       0.10                     
+  Np1/y_reg_3_/CLK (DFFARX1_RVT)           0.10      0.00       0.10 r    i              1.16
+  Np1/y_reg_3_/Q (DFFARX1_RVT)             0.01      0.06       0.16 r                   1.16
+  Np1/y[3] (net)                 1                   0.00       0.16 r                   
+  Np1/y[3] (no_pipeline)                             0.00       0.16 r                   
+  y[3] (net)                                         0.00       0.16 r                   
+  y[3] (out)                               0.01      0.00 *     0.16 r                   
+  data arrival time                                             0.16                     
+
+  clock MAIN_CLOCK (rise edge)                       5.00       5.00                     
+  clock network delay (ideal)                        0.10       5.10                     
+  clock uncertainty                                 -0.50       4.60                     
+  output external delay                             -0.30       4.30                     
+  data required time                                            4.30                     
+  ----------------------------------------------------------------------------------------------------
+  data required time                                            4.30                     
+  data arrival time                                            -0.16                     
+  ----------------------------------------------------------------------------------------------------
+  slack (MET)                                                   4.14                     
+
+
+1

@@ -1,0 +1,103 @@
+Information: Propagating switching activity (high effort zero delay simulation). (PWR-6)
+Warning: The derived static probability value (0.500000) for the clock net 'CLK' conflicts with the annotated value (0.510204). Using the annotated value. (PWR-12)
+Warning: The derived toggle rate value (0.400000) for the clock net 'CLK' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+ 
+****************************************
+Report : power
+        -analysis_effort high
+        -verbose
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ss0p95v125c
+Version: O-2018.06-SP4
+Date   : Mon Oct  3 17:19:29 2022
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ss0p95v125c (File: /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db)
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+Information: Correlated power is not available. (PWR-761)
+Power Breakdown
+---------------
+
+                             Cell        Driven Net  Tot Dynamic      Cell
+                             Internal    Switching   Power (uW)       Leakage
+Cell                         Power (uW)  Power (uW)  (% Cell/Tot)     Power (pW)
+--------------------------------------------------------------------------------
+Netlist Power                   3.2935      1.4683   4.762e+00 (69%)  5.385e+06
+Estimated Clock Tree Power   N/A         N/A          (N/A)           N/A
+--------------------------------------------------------------------------------
+                 Internal         Switching           Leakage            Total                         Cell
+Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
+---------------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+register       -3.7259e-02        1.3592e-02        1.3184e+06            1.2948 (  12.76%)            8
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+combinational      3.3308            1.4547        4.0662e+06            8.8517  (  87.24%)            47
+---------------------------------------------------------------------------------------------------------
+Total              3.2935 uW         1.4683 uW     5.3847e+06 pW        10.1465 uW
+Information: Propagating switching activity (high effort zero delay simulation). (PWR-6)
+Warning: The derived static probability value (0.500000) for the clock net 'CLK' conflicts with the annotated value (0.510204). Using the annotated value. (PWR-12)
+Warning: The derived toggle rate value (0.400000) for the clock net 'CLK' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+ 
+****************************************
+Report : power
+        -analysis_effort high
+        -verbose
+Design : TOP
+Scenario(s): mode_norm.OC_rvt_ff1p16vn40c
+Version: O-2018.06-SP4
+Date   : Mon Oct  3 17:19:29 2022
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ff1p16vn40c (File: /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ff1p16vn40c.db)
+
+
+Global Operating Voltage = 1.16 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+Information: Correlated power is not available. (PWR-761)
+Power Breakdown
+---------------
+
+                             Cell        Driven Net  Tot Dynamic      Cell
+                             Internal    Switching   Power (uW)       Leakage
+Cell                         Power (uW)  Power (uW)  (% Cell/Tot)     Power (pW)
+--------------------------------------------------------------------------------
+Netlist Power                   2.2335      2.3464   4.580e+00 (49%)  5.385e+06
+Estimated Clock Tree Power   N/A         N/A          (N/A)           N/A
+--------------------------------------------------------------------------------
+                 Internal         Switching           Leakage            Total                         Cell
+Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
+---------------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+register       -1.3772e+00        2.2168e-02        1.3184e+06        -3.6625e-02 (  -0.37%)            8
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+combinational      3.6107            2.3243        4.0662e+06           10.0013  ( 100.37%)            47
+---------------------------------------------------------------------------------------------------------
+Total              2.2335 uW         2.3464 uW     5.3847e+06 pW         9.9646 uW
+1

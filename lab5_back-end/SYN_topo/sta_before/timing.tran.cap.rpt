@@ -1,0 +1,142 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-input_pins
+	-nets
+	-max_paths 1
+	-transition_time
+	-capacitance
+	-sort_by slack
+Design : mul_bw16
+Version: O-2018.06-SP4
+Date   : Fri Nov 25 19:06:36 2022
+****************************************
+
+Warning: There are 900 invalid end points for constrained paths. (UITE-416)
+
+  Startpoint: a_pipe_reg[3][3]
+               (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Endpoint: partials_reg[3][31]
+               (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                    0.00       0.00       0.00
+  clock network delay (ideal)                                0.00       0.00
+  a_pipe_reg[3][3]/CLK (DFFSSRX1_RVT)             0.00       0.00       0.00 r
+  a_pipe_reg[3][3]/Q (DFFSSRX1_RVT)               0.02       0.05       0.05 r
+  a_pipe[3][3] (net)             7     4.26 
+  U1298/A (NBUFFX2_RVT)                           0.02       0.00       0.05 r
+  U1298/Y (NBUFFX2_RVT)                           0.02       0.02       0.07 r
+  n1037 (net)                   10     6.17 
+  U1048/A1 (AND2X1_RVT)                           0.02       0.00       0.07 r
+  U1048/Y (AND2X1_RVT)                            0.01       0.02       0.09 r
+  N308 (net)                     2     1.59 
+  add_30_G4/U27/A1 (AND2X1_RVT)                   0.01       0.00       0.09 r
+  add_30_G4/U27/Y (AND2X1_RVT)                    0.01       0.02       0.11 r
+  add_30_G4/carry[4] (net)       1     1.62 
+  add_30_G4/U1_4/CI (FADDX1_RVT)                  0.01       0.00       0.11 r
+  add_30_G4/U1_4/CO (FADDX1_RVT)                  0.02       0.03       0.14 r
+  add_30_G4/carry[5] (net)       1     1.62 
+  add_30_G4/U1_5/CI (FADDX1_RVT)                  0.02       0.00       0.14 r
+  add_30_G4/U1_5/CO (FADDX1_RVT)                  0.02       0.03       0.17 r
+  add_30_G4/carry[6] (net)       1     1.62 
+  add_30_G4/U1_6/CI (FADDX1_RVT)                  0.02       0.00       0.17 r
+  add_30_G4/U1_6/CO (FADDX1_RVT)                  0.02       0.03       0.20 r
+  add_30_G4/carry[7] (net)       1     1.62 
+  add_30_G4/U1_7/CI (FADDX1_RVT)                  0.02       0.00       0.20 r
+  add_30_G4/U1_7/CO (FADDX1_RVT)                  0.02       0.03       0.23 r
+  add_30_G4/carry[8] (net)       1     1.62 
+  add_30_G4/U1_8/CI (FADDX1_RVT)                  0.02       0.00       0.23 r
+  add_30_G4/U1_8/CO (FADDX1_RVT)                  0.02       0.03       0.26 r
+  add_30_G4/carry[9] (net)       1     1.62 
+  add_30_G4/U1_9/CI (FADDX1_RVT)                  0.02       0.00       0.26 r
+  add_30_G4/U1_9/CO (FADDX1_RVT)                  0.02       0.03       0.29 r
+  add_30_G4/carry[10] (net)      1     1.62 
+  add_30_G4/U1_10/CI (FADDX1_RVT)                 0.02       0.00       0.29 r
+  add_30_G4/U1_10/CO (FADDX1_RVT)                 0.02       0.03       0.32 r
+  add_30_G4/carry[11] (net)      1     1.62 
+  add_30_G4/U1_11/CI (FADDX1_RVT)                 0.02       0.00       0.32 r
+  add_30_G4/U1_11/CO (FADDX1_RVT)                 0.02       0.03       0.36 r
+  add_30_G4/carry[12] (net)      1     1.62 
+  add_30_G4/U1_12/CI (FADDX1_RVT)                 0.02       0.00       0.36 r
+  add_30_G4/U1_12/CO (FADDX1_RVT)                 0.02       0.03       0.39 r
+  add_30_G4/carry[13] (net)      1     1.62 
+  add_30_G4/U1_13/CI (FADDX1_RVT)                 0.02       0.00       0.39 r
+  add_30_G4/U1_13/CO (FADDX1_RVT)                 0.02       0.03       0.42 r
+  add_30_G4/carry[14] (net)      1     1.62 
+  add_30_G4/U1_14/CI (FADDX1_RVT)                 0.02       0.00       0.42 r
+  add_30_G4/U1_14/CO (FADDX1_RVT)                 0.02       0.03       0.45 r
+  add_30_G4/carry[15] (net)      1     1.62 
+  add_30_G4/U1_15/CI (FADDX1_RVT)                 0.02       0.00       0.45 r
+  add_30_G4/U1_15/CO (FADDX1_RVT)                 0.02       0.03       0.48 r
+  add_30_G4/carry[16] (net)      1     1.62 
+  add_30_G4/U1_16/CI (FADDX1_RVT)                 0.02       0.00       0.48 r
+  add_30_G4/U1_16/CO (FADDX1_RVT)                 0.02       0.03       0.51 r
+  add_30_G4/carry[17] (net)      1     1.62 
+  add_30_G4/U1_17/CI (FADDX1_RVT)                 0.02       0.00       0.51 r
+  add_30_G4/U1_17/CO (FADDX1_RVT)                 0.02       0.03       0.54 r
+  add_30_G4/carry[18] (net)      1     1.62 
+  add_30_G4/U1_18/CI (FADDX1_RVT)                 0.02       0.00       0.54 r
+  add_30_G4/U1_18/CO (FADDX1_RVT)                 0.02       0.03       0.57 r
+  add_30_G4/carry[19] (net)      2     2.04 
+  add_30_G4/U26/A2 (AND2X1_RVT)                   0.02       0.00       0.57 r
+  add_30_G4/U26/Y (AND2X1_RVT)                    0.01       0.02       0.59 r
+  add_30_G4/carry[20] (net)      2     2.04 
+  add_30_G4/U25/A2 (AND2X1_RVT)                   0.01       0.00       0.59 r
+  add_30_G4/U25/Y (AND2X1_RVT)                    0.01       0.02       0.61 r
+  add_30_G4/carry[21] (net)      2     2.04 
+  add_30_G4/U24/A2 (AND2X1_RVT)                   0.01       0.00       0.61 r
+  add_30_G4/U24/Y (AND2X1_RVT)                    0.01       0.02       0.63 r
+  add_30_G4/carry[22] (net)      2     2.04 
+  add_30_G4/U23/A2 (AND2X1_RVT)                   0.01       0.00       0.63 r
+  add_30_G4/U23/Y (AND2X1_RVT)                    0.01       0.02       0.65 r
+  add_30_G4/carry[23] (net)      2     2.04 
+  add_30_G4/U22/A2 (AND2X1_RVT)                   0.01       0.00       0.65 r
+  add_30_G4/U22/Y (AND2X1_RVT)                    0.01       0.02       0.67 r
+  add_30_G4/carry[24] (net)      2     2.04 
+  add_30_G4/U21/A2 (AND2X1_RVT)                   0.01       0.00       0.67 r
+  add_30_G4/U21/Y (AND2X1_RVT)                    0.01       0.02       0.68 r
+  add_30_G4/carry[25] (net)      2     2.04 
+  add_30_G4/U20/A2 (AND2X1_RVT)                   0.01       0.00       0.68 r
+  add_30_G4/U20/Y (AND2X1_RVT)                    0.01       0.02       0.70 r
+  add_30_G4/carry[26] (net)      2     2.04 
+  add_30_G4/U19/A2 (AND2X1_RVT)                   0.01       0.00       0.70 r
+  add_30_G4/U19/Y (AND2X1_RVT)                    0.01       0.02       0.72 r
+  add_30_G4/carry[27] (net)      2     2.04 
+  add_30_G4/U18/A2 (AND2X1_RVT)                   0.01       0.00       0.72 r
+  add_30_G4/U18/Y (AND2X1_RVT)                    0.01       0.02       0.74 r
+  add_30_G4/carry[28] (net)      2     2.04 
+  add_30_G4/U17/A2 (AND2X1_RVT)                   0.01       0.00       0.74 r
+  add_30_G4/U17/Y (AND2X1_RVT)                    0.01       0.02       0.76 r
+  add_30_G4/carry[29] (net)      2     2.04 
+  add_30_G4/U16/A2 (AND2X1_RVT)                   0.01       0.00       0.76 r
+  add_30_G4/U16/Y (AND2X1_RVT)                    0.01       0.02       0.78 r
+  add_30_G4/carry[30] (net)      2     1.95 
+  add_30_G4/U14/A2 (NAND2X0_RVT)                  0.01       0.00       0.78 r
+  add_30_G4/U14/Y (NAND2X0_RVT)                   0.02       0.01       0.79 f
+  add_30_G4/n1 (net)             1     1.24 
+  add_30_G4/U13/A2 (XNOR2X1_RVT)                  0.02       0.00       0.79 f
+  add_30_G4/U13/Y (XNOR2X1_RVT)                   0.02       0.04       0.83 r
+  add_30_G4/SUM[31] (net)        1     0.59 
+  partials_reg[3][31]/D (DFFSSRX1_RVT)            0.02       0.00       0.83 r
+  data arrival time                                                     0.83
+
+  clock MAIN_CLOCK (rise edge)                    0.00       5.00       5.00
+  clock network delay (ideal)                                0.00       5.00
+  clock reconvergence pessimism                              0.00       5.00
+  clock uncertainty                                         -0.50       4.50
+  partials_reg[3][31]/CLK (DFFSSRX1_RVT)                                4.50 r
+  library setup time                                        -0.05       4.45
+  data required time                                                    4.45
+  -----------------------------------------------------------------------------
+  data required time                                                    4.45
+  data arrival time                                                    -0.83
+  -----------------------------------------------------------------------------
+  slack (MET)                                                           3.62
+
+
+1

@@ -1,0 +1,12 @@
+ #EDU
+ export SNPSLMD_LICENSE_FILE=26585@143.248.230.161
+ 
+ export PATH=${PATH}:/data/SYNOPSYS/scl/2018.06/linux64/bin
+ export PATH=${PATH}:/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/bin
+ export PATH=${PATH}:/data/SYNOPSYS/syn/2018.06-SP4/bin
+ export PATH=${PATH}:/data/SYNOPSYS/fm/O-2018.06-SP4/bin
+ export PATH=${PATH}:/data/SYNOPSYS/icc/O-2018.06-SP5/bin
+ export PATH=${PATH}:/data/SYNOPSYS/pts/O-2018.06-SP4/amd64/syn/bin
+ export PATH=${PATH}:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/bin
+ export VCS_HOME=/data/SYNOPSYS/vcs-mx/M-2017.03-SP2
+ export VERDI_HOME=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2

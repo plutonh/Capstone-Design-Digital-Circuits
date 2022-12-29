@@ -1,0 +1,3 @@
+Command Line: /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/fsdb2vcd carry_ripple_adder.fsdb -o carry_ripple_adder.vcd
+uname(Linux AIHA 5.4.0-126-generic #142~18.04.1-Ubuntu SMP Thu Sep 1 16:25:16 UTC 2022 x86_64)
+au time 0.001995 0.001423 0.000569 delta 266240 266240 total 85299200 85299200

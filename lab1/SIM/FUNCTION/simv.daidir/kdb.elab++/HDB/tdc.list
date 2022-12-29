@@ -1,0 +1,2 @@
+../../RTL/full_adder.v
+../TESTBENCH/tb_full_adder.v

@@ -1,0 +1,35 @@
+Writing verilog file '/home/lmj4666/workarea/capstone/lab2/SYN_topo/results/ICC2_files/TOP.v'.
+1
+1
+Information: Creating directory results/ICC2_files/TOP.MCMM
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+Info: all scenarios are active.
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived static probability value (0.500000) for the clock net 'CLK' conflicts with the annotated value (0.510204). Using the annotated value. (PWR-12)
+Warning: The derived toggle rate value (0.400000) for the clock net 'CLK' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived static probability value (0.500000) for the clock net 'CLK' conflicts with the annotated value (0.510204). Using the annotated value. (PWR-12)
+Warning: The derived toggle rate value (0.400000) for the clock net 'CLK' conflicts with the annotated value (0.050000). Using the annotated value. (PWR-12)
+Information: Writing backward SAIF information to file 'results/ICC2_files/TOP.SAIF/scenario_mode_norm.OC_rvt_ss0p95v125c.saif'. (PWR-458)
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+Information: Writing backward SAIF information to file 'results/ICC2_files/TOP.SAIF/scenario_mode_norm.OC_rvt_ff1p16vn40c.saif'. (PWR-458)
+No. of cell expansion preserved:	55
+Cell expansion output is completed 
+1
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+Information: Writing COMPONENTS section (DDEFW-014)
+Information: Completed COMPONENTS section  (DDEFW-016)
+Information: Writing PINS section (DDEFW-014)
+Information: Completed PINS section  (DDEFW-016)
+Information: No groups were written. (RPGP-018)
+1

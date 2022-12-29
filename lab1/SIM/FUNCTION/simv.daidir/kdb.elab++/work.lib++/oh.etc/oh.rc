@@ -1,0 +1,5 @@
+@elabcom rc file Version 1.0
+[oh]
+invokeDir = /home/capstone6/capstone/lab1/SIM/FUNCTION
+hostCommand = -lib simv.daidir/work -saveLevel -elab simv.daidir/kdb -simflow -simdir simv.daidir/kdb_libs -top tb_full_adder -Lf work -SNPS_ELABCOM -saveElab
+simType = VCS

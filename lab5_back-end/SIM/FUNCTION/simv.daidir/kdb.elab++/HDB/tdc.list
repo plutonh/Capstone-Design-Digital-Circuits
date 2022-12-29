@@ -1,0 +1,3 @@
+../../RTL/TOP.v
+../TESTBENCH/TB_TOP.v
+../../RTL/mul.v

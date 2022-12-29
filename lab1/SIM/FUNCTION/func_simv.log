@@ -1,0 +1,20 @@
+Command: /home/capstone6/capstone/lab1/SIM/FUNCTION/./simv -ucli -i fsdb.tcl -l func_simv.log
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version M-2017.03-SP2; Runtime version M-2017.03-SP2;  Sep 28 17:44 2022
+ucli% # Example of TB file expression 
+ucli% call {$fsdbDumpfile ("full_adder.fsdb")};
+*Verdi* Loading libsscore_vcs201703.so
+FSDB Dumper for VCS, Release Verdi_M-2017.03-SP2, Linux, 08/20/2017
+(C) 1996 - 2017 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'full_adder.fsdb'
+ucli% call {$fsdbDumpvars (0, tb_full_adder};
+*Verdi* : Begin traversing the scope (tb_full_adder), layer (0).
+*Verdi* : End of traversing.
+ucli% run
+$finish called from file "../TESTBENCH/tb_full_adder.v", line 15.
+$finish at simulation time                   80
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 80
+CPU Time:      0.500 seconds;       Data structure size:   0.0Mb
+Wed Sep 28 17:44:28 2022

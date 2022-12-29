@@ -1,0 +1,3 @@
+Command Line: /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/Novas -ssf TOP.fsdb
+uname(Linux AIHA 5.4.0-126-generic #142~18.04.1-Ubuntu SMP Thu Sep 1 16:25:16 UTC 2022 x86_64)
+Signal SIGHUP is received. Shutting down...31800832 231800832 total 622514176 622514176

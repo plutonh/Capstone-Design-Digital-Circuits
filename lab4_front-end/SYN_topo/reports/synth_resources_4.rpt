@@ -1,0 +1,22 @@
+ 
+****************************************
+Report : resources
+Design : mul_A_bw4
+Version: O-2018.06-SP4
+Date   : Mon Oct 31 23:39:40 2022
+****************************************
+
+Resource Sharing Report for design mul_A_bw4 in file ../RTL/mul_A.v
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r314     | DW01_add     | width=8    |               | add_30_G2            |
+| r316     | DW01_add     | width=8    |               | add_30_G3            |
+| r318     | DW01_add     | width=8    |               | add_30_G4            |
+===============================================================================
+
+
+No implementations to report
+1

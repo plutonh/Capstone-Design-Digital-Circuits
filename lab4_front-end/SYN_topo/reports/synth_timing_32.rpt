@@ -1,0 +1,377 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : mul_A_bw32
+Version: O-2018.06-SP4
+Date   : Mon Oct 31 23:57:02 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ff1p16vn40c   Library: saed32rvt_ff1p16vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][24]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4988/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][24]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][24]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][23]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4987/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][23]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][23]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][22]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4988/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][22]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][22]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][21]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4987/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][21]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][21]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][20]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4988/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][20]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][20]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][19]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4987/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][19]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][19]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][18]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4988/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][18]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][18]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][17]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4987/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][17]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][17]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][16]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4988/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][16]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][16]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+  Startpoint: RESETn (input port clocked by MAIN_CLOCK)
+  Endpoint: a_pipe_reg[4][15]
+            (rising edge-triggered flip-flop clocked by MAIN_CLOCK)
+  Path Group: MAIN_CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mul_A_bw32         70000                 saed32rvt_ff1p16vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MAIN_CLOCK (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  RESETn (in)                                             0.00       2.00 r
+  U5252/Y (NBUFFX2_RVT)                                   0.02       2.02 r
+  U5206/Y (NBUFFX2_RVT)                                   0.02       2.04 r
+  U5205/Y (INVX1_RVT)                                     0.03       2.07 f
+  U4987/Y (INVX1_RVT)                                     0.02       2.09 r
+  a_pipe_reg[4][15]/RSTB (DFFSSRX1_RVT)                   0.00       2.09 r
+  data arrival time                                                  2.09
+
+  clock MAIN_CLOCK (rise edge)                            5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  clock uncertainty                                      -0.50       4.50
+  a_pipe_reg[4][15]/CLK (DFFSSRX1_RVT)                    0.00       4.50 r
+  library setup time                                     -0.04       4.46
+  data required time                                                 4.46
+  --------------------------------------------------------------------------
+  data required time                                                 4.46
+  data arrival time                                                 -2.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.37
+
+
+1

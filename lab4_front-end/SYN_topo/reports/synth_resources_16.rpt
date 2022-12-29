@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : resources
+Design : mul_A_bw16
+Version: O-2018.06-SP4
+Date   : Mon Oct 31 23:47:05 2022
+****************************************
+
+Resource Sharing Report for design mul_A_bw16 in file ../RTL/mul_A.v
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r398     | DW01_add     | width=32   |               | add_30_G2            |
+| r400     | DW01_add     | width=32   |               | add_30_G3            |
+| r402     | DW01_add     | width=32   |               | add_30_G4            |
+| r404     | DW01_add     | width=32   |               | add_30_G5            |
+| r406     | DW01_add     | width=32   |               | add_30_G6            |
+| r408     | DW01_add     | width=32   |               | add_30_G7            |
+| r410     | DW01_add     | width=32   |               | add_30_G8            |
+| r412     | DW01_add     | width=32   |               | add_30_G9            |
+| r414     | DW01_add     | width=32   |               | add_30_G10           |
+| r416     | DW01_add     | width=32   |               | add_30_G11           |
+| r418     | DW01_add     | width=32   |               | add_30_G12           |
+| r420     | DW01_add     | width=32   |               | add_30_G13           |
+| r422     | DW01_add     | width=32   |               | add_30_G14           |
+| r424     | DW01_add     | width=32   |               | add_30_G15           |
+| r426     | DW01_add     | width=32   |               | add_30_G16           |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_30_G3          | DW01_add         | rpl                |                |
+| add_30_G4          | DW01_add         | rpl                |                |
+| add_30_G5          | DW01_add         | rpl                |                |
+| add_30_G6          | DW01_add         | rpl                |                |
+| add_30_G7          | DW01_add         | rpl                |                |
+| add_30_G8          | DW01_add         | rpl                |                |
+| add_30_G9          | DW01_add         | rpl                |                |
+| add_30_G10         | DW01_add         | rpl                |                |
+| add_30_G11         | DW01_add         | rpl                |                |
+| add_30_G12         | DW01_add         | rpl                |                |
+===============================================================================
+
+1

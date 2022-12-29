@@ -1,0 +1,23 @@
+Writing verilog file '/home/capstone6/capstone/lab3/SYN_topo/results/ICC2_files/TOP.v'.
+1
+1
+Warning: Deleting existing directory results/ICC2_files/TOP.MCMM
+Information: Creating directory results/ICC2_files/TOP.MCMM
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+Info: all scenarios are active.
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+Current scenario is: mode_norm.OC_rvt_ss0p95v125c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+Current scenario is: mode_norm.OC_rvt_ff1p16vn40c
+mode_norm.OC_rvt_ff1p16vn40c
+No. of cell expansion preserved:	79
+Cell expansion output is completed 
+1
+Information: Writing COMPONENTS section (DDEFW-014)
+Information: Completed COMPONENTS section  (DDEFW-016)
+Information: Writing PINS section (DDEFW-014)
+Information: Creating dummy net 'SYNOPSYS_UNCONNECTED_0' for unconnected port 'RESETn'. (DDEFW-006)
+Information: Completed PINS section  (DDEFW-016)
+Information: No groups were written. (RPGP-018)
+1

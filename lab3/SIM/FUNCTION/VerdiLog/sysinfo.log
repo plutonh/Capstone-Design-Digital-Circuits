@@ -1,0 +1,248 @@
+==========	uname -a	==========
+Linux AIHA 5.4.0-126-generic #142~18.04.1-Ubuntu SMP Thu Sep 1 16:25:16 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+-------------	end(uname -a)     -------------
+
+==========	limit		==========
+cputime 	unlimited
+filesize 	unlimited
+datasize 	unlimited
+stacksize 	8192 kbytes
+coredumpsize 	0 kbytes
+memoryuse 	unlimited
+memorylocked 	65536 kbytes
+maxproc 	255728 
+openfiles 	1024 
+-------------	end(limit)     -------------
+==========	xdpyinfo	==========
+xdpyinfo:  unable to open display "localhost:24.0".
+-------------	end(xdpyinfo)     -------------
+==========	Environment Variables	==========
+LC_ALL=C
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LD_LIBRARY_PATH=:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/lib/libstdc++/LINUXAMD64:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/share/NPI/lib/LINUXAMD64:
+NOVAS_VERDI_SVTB_BETA=1
+LC_MEASUREMENT=ko_KR.UTF-8
+SYS_INST_DIR=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2
+SSH_CONNECTION=166.104.35.214 49782 166.104.35.43 22
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_PAPER=ko_KR.UTF-8
+LC_MONETARY=ko_KR.UTF-8
+XKEYSYMDB=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/access/XKeysymDB2.1
+NOVAS_TCL_LIBRARY=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/access/tcl86_library
+LANG=C
+DISPLAY=localhost:24.0
+NOVAS_VERDI_SVTB_ALPHA=1
+OLDPWD=/home/capstone6
+VERDI_SVTB_ALPHA=1
+SNPSLMD_LICENSE_FILE=26585@143.248.230.161
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/bin/javac
+S_COLORS=auto
+LC_NAME=ko_KR.UTF-8
+XDG_SESSION_ID=8324
+NOVAS_SYNC_MOTIF_DISP=
+USER=capstone6
+PWD=/home/capstone6/capstone/lab3/SIM/FUNCTION
+HOME=/home/capstone6
+VERDI_SVTB_BETA=1
+SSH_CLIENT=166.104.35.214 49782 22
+NOVAS_WAVE_REDRAW_ALLVC=1
+XNLSPATH=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/access/nls
+TCL_LIBRARY=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/access/tcl86_library
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+LC_ADDRESS=ko_KR.UTF-8
+LC_NUMERIC=ko_KR.UTF-8
+SPS_XFONT_PATH=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/XFont
+SSH_TTY=/dev/pts/26
+MAIL=/var/mail/capstone6
+LD_NOVERSION=1
+QT_PLUGIN_PATH=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/plugins
+NOVAS_SIGNAL_BASE_EXTRACTION=1
+SHELL=/bin/bash
+TERM=xterm
+XMODIFIERS=@im=none
+XLOCALEDIR=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/access/locale
+WAVE_REDRAW_ALLVC=1
+VERDI_HOME=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2
+SHLVL=3
+NOVAS_LC_ALL=C
+SIGNAL_BASE_EXTRACTION=1
+SPS_FONT_PATH=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/font
+LC_TELEPHONE=ko_KR.UTF-8
+VERDI_ORIGNAL_LD_LIBRARY_PATH=
+LOGNAME=capstone6
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1026/bus
+SPS_RGB_PATH=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/rgb
+XDG_RUNTIME_DIR=/run/user/1026
+PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/data/SYNOPSYS/scl/2018.06/linux64/bin:/data/SYNOPSYS/scl/2018.06/linux64/bin:/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/bin:/data/SYNOPSYS/syn/2018.06-SP4/bin:/data/SYNOPSYS/scl/2018.06/linux64/bin:/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/bin:/data/SYNOPSYS/syn/2018.06-SP4/bin:/data/SYNOPSYS/fm/O-2018.06-SP4/bin:/data/SYNOPSYS/icc/O-2018.06-SP5/bin:/data/SYNOPSYS/pts/O-2018.06-SP4/amd64/syn/bin:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/bin:/data/SYNOPSYS/fm/O-2018.06-SP4/bin:/data/SYNOPSYS/icc/O-2018.06-SP5/bin:/data/SYNOPSYS/pts/O-2018.06-SP4/amd64/syn/bin:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/bin:/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/bin:/data/SYNOPSYS/syn/2018.06-SP4/bin:/data/SYNOPSYS/fm/O-2018.06-SP4/bin:/data/SYNOPSYS/icc/O-2018.06-SP5/bin:/data/SYNOPSYS/pts/O-2018.06-SP4/amd64/syn/bin:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/bin:/data/SYNOPSYS/scl/2018.06/linux64/bin:/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/bin:/data/SYNOPSYS/syn/2018.06-SP4/bin:/data/SYNOPSYS/fm/O-2018.06-SP4/bin:/data/SYNOPSYS/scl/2018.06/linux64/bin:/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/bin:/data/SYNOPSYS/syn/2018.06-SP4/bin:/data/SYNOPSYS/fm/O-2018.06-SP4/bin:/data/SYNOPSYS/icc/O-2018.06-SP5/bin:/data/SYNOPSYS/pts/O-2018.06-SP4/amd64/syn/bin:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/bin:/data/SYNOPSYS/icc/O-2018.06-SP5/bin:/data/SYNOPSYS/pts/O-2018.06-SP4/amd64/syn/bin:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/bin:/data/SYNOPSYS/scl/2018.06/linux64/bin:/data/SYNOPSYS/vcs-mx/M-2017.03-SP2/bin:/data/SYNOPSYS/syn/2018.06-SP4/bin:/data/SYNOPSYS/fm/O-2018.06-SP4/bin:/data/SYNOPSYS/icc/O-2018.06-SP5/bin:/data/SYNOPSYS/pts/O-2018.06-SP4/amd64/syn/bin:/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/bin
+LC_IDENTIFICATION=ko_KR.UTF-8
+VCS_HOME=/data/SYNOPSYS/vcs-mx/M-2017.03-SP2
+SYS_PROG_NAME=Verdi
+NOVASHLPPATH=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/doc
+LESSOPEN=| /usr/bin/lesspipe %s
+LC_TIME=ko_KR.UTF-8
+_=/data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/access/sysinfo.sh
+-------------	end(env)     -------------
+==========	ps	    ==========
+  PID TTY          TIME CMD
+16411 pts/26   00:00:00 bash
+16620 pts/26   00:00:00 bash
+17570 pts/26   00:00:00 sysinfo.sh
+18199 pts/26   00:00:00 ps
+-------------	end(ps)     -------------
+==========       cat /proc/meminfo        ==========
+MemTotal:       65589396 kB
+MemFree:        12209228 kB
+MemAvailable:   48519428 kB
+Buffers:          242600 kB
+Cached:         33160004 kB
+SwapCached:         5084 kB
+Active:         21253272 kB
+Inactive:       18927964 kB
+Active(anon):    6358536 kB
+Inactive(anon):  1479500 kB
+Active(file):   14894736 kB
+Inactive(file): 17448464 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:      30361596 kB
+SwapFree:       30158076 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:       6777472 kB
+Mapped:          2196684 kB
+Shmem:           1070472 kB
+KReclaimable:    4635668 kB
+Slab:            5994348 kB
+SReclaimable:    4635668 kB
+SUnreclaim:      1358680 kB
+KernelStack:       26112 kB
+PageTables:       109640 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    63156292 kB
+Committed_AS:   14764920 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      238692 kB
+VmallocChunk:          0 kB
+Percpu:            54528 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:     9857396 kB
+DirectMap2M:    56883200 kB
+DirectMap1G:     2097152 kB
+-------------	     end(cat /proc/meminfo)      -------------
+==========       xprop -root       ==========
+__NET_DESKTOP_NAMES(UTF8_STRING) = "Desktop"
+_NET_NUMBER_OF_DESKTOPS(CARDINAL) = 1
+_NET_CURRENT_DESKTOP(CARDINAL) = 0
+_NET_SUPPORTED(ATOM) = WM_PROTOCOLS, _NET_SUPPORTED, _NET_SUPPORTING_WM_CHECK, _NET_CLOSE_WINDOW, _NET_WM_WINDOW_TYPE, _NET_WM_WINDOW_TYPE_DOCK, _NET_WM_WINDOW_TYPE_SPLASH, _NET_WM_STATE, _NET_WM_STATE_HIDDEN, _NET_WM_STATE_ABOVE, _NET_WM_STATE_BELOW, _NET_WM_STATE_SKIP_TASKBAR, _NET_WM_STATE_MAXIMIZED_VERT, _NET_WM_STATE_MAXIMIZED_HORZ
+WM_ICON_SIZE(WM_ICON_SIZE):
+		minimum icon size: 16 by 16
+		maximum icon size: 48 by 48
+		incremental size change: 16 by 16
+_XKB_RULES_NAMES(STRING) = "base", "kr106", "kr", "", ""
+-------------    end(xprop -root)      -------------
+==========       xset -q      ==========
+Keyboard Control:
+  auto repeat:  on    key click percent:  0    LED mask:  00000000
+  XKB indicators:
+    00: Caps Lock:   off    01: Num Lock:    off    02: Scroll Lock: off
+    03: Shift Lock:  off    04: Group 2:     off    05: Mouse Keys:  off
+  auto repeat delay:  500    repeat rate:  31
+  auto repeating keys:  00feffffdffffbbf
+                        faffffffffdfe5ef
+                        ffffffffffffffff
+                        ffffffffffffffff
+  bell percent:  50    bell pitch:  400    bell duration:  100
+Pointer Control:
+  acceleration:  2/1    threshold:  4
+Screen Saver:
+  prefer blanking:  yes    allow exposures:  yes
+  timeout:  600    cycle:  600
+Colors:
+  default colormap:  0x20    BlackPixel:  0x0    WhitePixel:  0xffffff
+Font Path:
+  C:\Users\user\AppData\Roaming\MobaXterm\slash/usr/share/fonts/misc/,built-ins
+DPMS (Energy Star):
+  Server does not have the DPMS Extension
+-------------    end(xset -q)      -------------
+==========       show OS patch level     ==========
+Ubuntu 18.04.6 LTS \n \l
+
+-------------    end(show OS patch level)      -------------
+=========       uptime      ==========
+ 15:42:38 up 4 days, 20:08, 25 users,  load average: 3.44, 3.67, 3.74
+------------    end(uptime)    -------------
+=========       locale       ==========
+LANG=C
+LANGUAGE=
+LC_CTYPE="C"
+LC_NUMERIC="C"
+LC_TIME="C"
+LC_COLLATE="C"
+LC_MONETARY="C"
+LC_MESSAGES="C"
+LC_PAPER="C"
+LC_NAME="C"
+LC_ADDRESS="C"
+LC_TELEPHONE="C"
+LC_MEASUREMENT="C"
+LC_IDENTIFICATION="C"
+LC_ALL=C
+------------    end(locale)    -------------
+==========       ldd       ==========
+ldd /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/Novas
+/bin/bash: /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/lib/libstdc++/LINUXAMD64/libtinfo.so.5: no version information available (required by /bin/bash)
+	linux-vdso.so.1 (0x00007fff3cdb8000)
+	libfreetype.so.6 => /usr/lib/x86_64-linux-gnu/libfreetype.so.6 (0x00007f487cd36000)
+	libQtSolutions_MotifExtension-2.7.so.1 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/libQtSolutions_MotifExtension-2.7.so.1 (0x00007f487cb20000)
+	libQtGui.so.4 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/libQtGui.so.4 (0x00007f487bf7c000)
+	libQtCore.so.4 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/libQtCore.so.4 (0x00007f487bae3000)
+	libQtXml.so.4 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/libQtXml.so.4 (0x00007f487b8a9000)
+	libQtWebKit.so.4 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/libQtWebKit.so.4 (0x00007f4879f99000)
+	libQtNetwork.so.4 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/libQtNetwork.so.4 (0x00007f4879cb6000)
+	libQt3Support.so.4 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/libQt3Support.so.4 (0x00007f4879816000)
+	libQtSql.so.4 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/libQtSql.so.4 (0x00007f48795e0000)
+	libsimprofile.so => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/platform/LINUXAMD64/bin/libsimprofile.so (0x00007f48791f9000)
+	libXss.so.1 => /usr/lib/x86_64-linux-gnu/libXss.so.1 (0x00007f4878ff5000)
+	libXft.so.2 => /usr/lib/x86_64-linux-gnu/libXft.so.2 (0x00007f4878de0000)
+	libXt.so.6 => /usr/lib/x86_64-linux-gnu/libXt.so.6 (0x00007f4878b77000)
+	libXmu.so.6 => /usr/lib/x86_64-linux-gnu/libXmu.so.6 (0x00007f487895e000)
+	libX11.so.6 => /usr/lib/x86_64-linux-gnu/libX11.so.6 (0x00007f4878626000)
+	libXext.so.6 => /usr/lib/x86_64-linux-gnu/libXext.so.6 (0x00007f4878414000)
+	libfontconfig.so.1 => /usr/lib/x86_64-linux-gnu/libfontconfig.so.1 (0x00007f48781cf000)
+	libnsl.so.1 => /lib/x86_64-linux-gnu/libnsl.so.1 (0x00007f4877fb5000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f4877d96000)
+	librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007f4877b8e000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f487798a000)
+	libpng12.so.0 => /lib/x86_64-linux-gnu/libpng12.so.0 (0x00007f4877765000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f48773c7000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f4876fd6000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f487cfea000)
+	libpng16.so.16 => /usr/lib/x86_64-linux-gnu/libpng16.so.16 (0x00007f4876da4000)
+	libz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x00007f4876b87000)
+	libSM.so.6 => /usr/lib/x86_64-linux-gnu/libSM.so.6 (0x00007f487697f000)
+	libICE.so.6 => /usr/lib/x86_64-linux-gnu/libICE.so.6 (0x00007f4876764000)
+	libstdc++.so.6 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/lib/libstdc++/LINUXAMD64/libstdc++.so.6 (0x00007f48763ea000)
+	libgcc_s.so.1 => /data/SYNOPSYS/verdi/Verdi_M-2017.03-SP2/etc/lib/libstdc++/LINUXAMD64/libgcc_s.so.1 (0x00007f48761d4000)
+	libXrender.so.1 => /usr/lib/x86_64-linux-gnu/libXrender.so.1 (0x00007f4875fca000)
+	libxcb.so.1 => /usr/lib/x86_64-linux-gnu/libxcb.so.1 (0x00007f4875da2000)
+	libexpat.so.1 => /lib/x86_64-linux-gnu/libexpat.so.1 (0x00007f4875b70000)
+	libuuid.so.1 => /lib/x86_64-linux-gnu/libuuid.so.1 (0x00007f4875969000)
+	libbsd.so.0 => /lib/x86_64-linux-gnu/libbsd.so.0 (0x00007f4875754000)
+	libXau.so.6 => /usr/lib/x86_64-linux-gnu/libXau.so.6 (0x00007f4875550000)
+	libXdmcp.so.6 => /usr/lib/x86_64-linux-gnu/libXdmcp.so.6 (0x00007f487534a000)
+-------------    end(ldd)      -------------

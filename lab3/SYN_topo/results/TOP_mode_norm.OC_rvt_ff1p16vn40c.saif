@@ -1,0 +1,96 @@
+ 
+****************************************
+Report : saif
+        -missing
+        -hierarchy
+        -rtl_saif
+Design : TOP
+Version: O-2018.06-SP4
+Date   : Wed Oct 26 12:37:13 2022
+****************************************
+
+  
+
+--------------------------------------------------------------------------------
+              User              Default           Propagated
+Object type   Annotated (%)     Activity (%)      Activity (%)       Total
+--------------------------------------------------------------------------------
+  
+ Ports        0(0.00%)          0(0.00%)          18(100.00%)        18
+ Seq Cells    0(0.00%)          0(0.00%)          43(100.00%)        43
+ Tri Cells    0(0.00%)          0(0.00%)          0(0.00%)           0
+--------------------------------------------------------------------------------
+
+ List of Non-annotated ports :
+
+   RESETn 
+   CLK 
+   y[0] 
+   y[1] 
+   y[2] 
+   y[3] 
+   y[4] 
+   y[5] 
+   y[6] 
+   y[7] 
+   b[0] 
+   b[1] 
+   b[2] 
+   b[3] 
+   a[0] 
+   a[1] 
+   a[2] 
+   a[3] 
+
+ List of Non-annotated sequential cells :
+
+   PAM/partials_reg_0__0_ 
+   PAM/partials_reg_0__1_ 
+   PAM/partials_reg_0__2_ 
+   PAM/partials_reg_0__3_ 
+   PAM/partials_reg_1__0_ 
+   PAM/partials_reg_1__1_ 
+   PAM/partials_reg_1__2_ 
+   PAM/partials_reg_1__3_ 
+   PAM/partials_reg_1__4_ 
+   PAM/partials_reg_1__5_ 
+   PAM/partials_reg_2__0_ 
+   PAM/partials_reg_2__1_ 
+   PAM/partials_reg_2__2_ 
+   PAM/partials_reg_2__3_ 
+   PAM/partials_reg_2__4_ 
+   PAM/partials_reg_2__5_ 
+   PAM/partials_reg_2__6_ 
+   PAM/partials_reg_3__0_ 
+   PAM/partials_reg_3__1_ 
+   PAM/partials_reg_3__2_ 
+   PAM/partials_reg_3__3_ 
+   PAM/partials_reg_3__4_ 
+   PAM/partials_reg_3__5_ 
+   PAM/partials_reg_3__6_ 
+   PAM/partials_reg_3__7_ 
+   PAM/b_pipe_reg_2__0_ 
+   PAM/b_pipe_reg_1__0_ 
+   PAM/b_pipe_reg_0__0_ 
+   PAM/b_pipe_reg_2__1_ 
+   PAM/b_pipe_reg_1__1_ 
+   PAM/b_pipe_reg_0__1_ 
+   PAM/b_pipe_reg_2__2_ 
+   PAM/b_pipe_reg_1__2_ 
+   PAM/b_pipe_reg_0__2_ 
+   PAM/b_pipe_reg_2__3_ 
+   PAM/b_pipe_reg_1__3_ 
+   PAM/b_pipe_reg_0__3_ 
+   PAM/a_pipe_reg_0__1_ 
+   PAM/a_pipe_reg_1__2_ 
+   PAM/a_pipe_reg_0__2_ 
+   PAM/a_pipe_reg_2__3_ 
+   PAM/a_pipe_reg_1__3_ 
+   PAM/a_pipe_reg_0__3_ 
+
+ List of Non-annotated three-state cells :
+
+   0 three-state cells
+
+--------------------------------------------------------------------------------
+1

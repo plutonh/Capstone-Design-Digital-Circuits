@@ -1,0 +1,2 @@
+LIBRARY    TOP_LIB
+  REFERENCE    /data/SYNOPSYS/lib/32nm/SAED32_EDK/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m

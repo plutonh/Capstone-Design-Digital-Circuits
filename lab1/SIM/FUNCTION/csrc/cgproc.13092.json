@@ -1,0 +1,99 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.0/_13092_archive_1.a",
+            "objects": [
+                [
+                    "dYfmY_d.o",
+                    9377
+                ],
+                [
+                    "amcQwB.o",
+                    67850
+                ]
+            ],
+            "size": 77227
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {
+            "start_perf": [
+                0.36355691845528781,
+                0.075966000000000006,
+                0.042202999999999997,
+                198052,
+                212692,
+                1664354665.4692349
+            ],
+            "end_perf": [
+                0.36742991849314421,
+                0.079838000000000006,
+                0.042202999999999997,
+                200468,
+                212692
+            ],
+            "nQuads": 0,
+            "nMops": 0
+        },
+        "tb_full_adder": {
+            "start_perf": [
+                0.3675179184647277,
+                0.079926999999999998,
+                0.042202999999999997,
+                200468,
+                212692,
+                1664354665.473196
+            ],
+            "end_perf": [
+                0.44934191845823079,
+                0.095493999999999996,
+                0.043406,
+                203236,
+                212692
+            ],
+            "Compiled": "Yes",
+            "nMops": 500,
+            "Compiled Times": 1,
+            "nQuads": 197
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "checksum": 0,
+            "bytes": 4746,
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "mode": 4
+        },
+        "dYfmY_d": {
+            "checksum": 0,
+            "bytes": 9377,
+            "mod": "tb_full_adder",
+            "out": "dYfmY_d.o",
+            "mode": 4,
+            "archive": "archive.0/_13092_archive_1.a"
+        }
+    },
+    "reusePaths": {},
+    "stat": {
+        "ru_self_end": {
+            "ru_nvcsw": 43,
+            "ru_minflt": 8068,
+            "ru_maxrss_kb": 96868,
+            "ru_utime_sec": 0.103353,
+            "ru_majflt": 2,
+            "ru_stime_sec": 0.043406,
+            "ru_nivcsw": 3
+        },
+        "ru_childs_end": {
+            "ru_nvcsw": 8,
+            "ru_minflt": 1777,
+            "ru_maxrss_kb": 16632,
+            "ru_utime_sec": 0.025763999999999999,
+            "ru_majflt": 0,
+            "ru_stime_sec": 0.016503,
+            "ru_nivcsw": 2
+        },
+        "peak_mem_kb": 212692
+    }
+}

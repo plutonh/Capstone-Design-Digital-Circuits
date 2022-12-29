@@ -1,0 +1,77 @@
+@Verdi rc file Version 1.0
+[General]
+VerdiVersion = Verdi_M-2017.03-SP2
+[KeyNote]
+Line1 = Automatic Backup 0
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+powerDumped = 0
+[hb]
+postSimFile = /home/lmj4666/workarea/capstone/lab2/SIM/FUNCTION/TOP.fsdb
+syncTime = 0
+viewport = 2110 370 900 819 294 442 228 898
+activeNode = "TB_TOP"
+activeScope = "TB_TOP"
+activeFile = "../TESTBENCH/TB_TOP.v"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 2
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "TB_TOP"
+multipleSelection = 1 2 2 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+simvDaidir = /home/lmj4666/workarea/capstone/lab2/SIM/FUNCTION/simv.daidir
+[hb.sourceTab.1]
+scope = TB_TOP
+File = /home/lmj4666/workarea/capstone/lab2/SIM/TESTBENCH/TB_TOP.v
+Line = 3
+[imp.design1]
+dbEnum =  oh
+invokeDir = /home/lmj4666/workarea/capstone/lab2/SIM/FUNCTION
+design = DebussyLib
+hostCommand = hostCommand -elab /home/lmj4666/workarea/capstone/lab2/SIM/FUNCTION/simv.daidir/kdb.elab++
+topName = TB_TOP
+fromLibrary = TRUE
+[nMemoryManager]
+FsdbFile = /home/lmj4666/workarea/capstone/lab2/SIM/FUNCTION/TOP.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 28 900 187 100 65
+primaryWindow = TRUE
+SessionFile = /home/lmj4666/workarea/capstone/lab2/SIM/FUNCTION/VerdiLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSyncCursorMarker = FALSE
+waveformSyncHorizontalRange = FALSE
+waveformSyncVerticalscroll = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE
